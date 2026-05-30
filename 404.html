@@ -1,13 +1,157 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Not found - The Golem Covenant</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not Found - The Golem Covenant</title>
+  <meta name="description" content="The requested Golem Covenant document was not found.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f8fa;
+      --ink: #11161d;
+      --muted: #53606d;
+      --soft: #eef2f5;
+      --line: #d6dde4;
+      --panel: #ffffff;
+      --accent: #8f1f3d;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101317;
+        --ink: #eef3f8;
+        --muted: #abb6c2;
+        --soft: #171d23;
+        --line: #2b3540;
+        --panel: #151a20;
+        --accent: #f07a96;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font: 17px/1.6 ui-serif, Georgia, Cambria, "Times New Roman", serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+      font: 700 13px/1.2 ui-sans-serif, system-ui, sans-serif;
+    }
+    .topbar-inner {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 26px;
+      height: 26px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      color: var(--accent);
+      font-size: 14px;
+    }
+    .toplinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+    .toplinks a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    main {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0;
+    }
+    .eyebrow {
+      color: var(--accent);
+      font: 800 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 14px;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 1;
+      margin: 0 0 18px;
+    }
+    .lede {
+      color: var(--muted);
+      font-size: 21px;
+      line-height: 1.45;
+      margin: 0 0 26px;
+    }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 18px;
+    }
+    ul { margin: 0; padding-left: 20px; color: var(--muted); }
+    li { margin: 8px 0; }
+    code {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 0.1em 0.28em;
+      font: 0.9em/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    @media (max-width: 640px) {
+      .topbar-inner { flex-direction: column; align-items: flex-start; padding: 14px 0; }
+      .toplinks { justify-content: flex-start; }
+      main { padding: 44px 0; }
+      h1 { font-size: 36px; }
+      .lede { font-size: 18px; }
+    }
+  </style>
+</head>
 <body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span>golem.md</span>
+      </a>
+      <nav class="toplinks" aria-label="Primary">
+        <a href="/spec.html">Spec</a>
+        <a href="/sources.html">Sources</a>
+        <a href="/schema/golem.schema.json">Schema</a>
+        <a href="https://github.com/KristopherKubicki/golem-covenant">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>Not found</h1>
-    <p>The requested document is not here yet.</p>
-    <p><a href="/">Return to The Golem Covenant</a></p>
+    <p class="eyebrow">404</p>
+    <h1>Document not found</h1>
+    <p class="lede">That path is not part of the current v0.1 draft. The canonical entry points are still available.</p>
+    <div class="panel">
+      <ul>
+        <li><a href="/spec.html">Readable spec</a></li>
+        <li><a href="/golem.md"><code>/golem.md</code></a></li>
+        <li><a href="/sources.html">Citation map</a></li>
+        <li><a href="/schema/golem.schema.json">Manifest schema</a></li>
+        <li><a href="/llms.txt">Bot entry point</a></li>
+      </ul>
+    </div>
   </main>
 </body>
 </html>

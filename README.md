@@ -111,6 +111,7 @@ templates/RETURN_TO_DUST_TEST.md  Return-to-dust test checklist
 templates/AUDIT.md            Logs, reviewers, tests, escalation
 templates/MEMORY.md           What may be remembered, forgotten, or never stored
 SOURCES.md                    Citation map with claim boundaries
+SECURITY.md                   Security and runtime-safety reporting guidance
 llms.txt                      Bot-friendly entry point
 .well-known/golem.json        Machine-readable project discovery
 ```
