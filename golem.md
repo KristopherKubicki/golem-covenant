@@ -1,22 +1,30 @@
-# golem.md
-# The Golem Covenant
+# golem.md: The Golem Covenant
 
-Status: draft covenant for bounded, answerable AI agents.
+Status: v0.1 draft covenant for bounded, answerable AI agents.
 
-This document defines the covenant. `soul.md` applies the covenant to a
-particular agent, keeper, or deployment.
+This document is the normative human-readable covenant and spec. `soul.md`
+applies the covenant to a particular agent, keeper, or deployment.
+
+## Rule
+
+No golem without a soul.
+No soul without declared organs.
+No organs without limits.
+No limits without tested revocation.
 
 ## Normative files
 
 - `golem.md`: normative human-readable covenant and spec
 - `schema/golem.schema.json`: normative machine-readable schema
-- `docs/conformance.md`: conformance language for implementers
+- `docs/conformance.md`: normative conformance language for implementers
 
 `golem.yml` is a reference manifest. It is useful because it shows the expected
 shape, but implementations should validate against the schema rather than copy
 the example blindly.
 
 ## Premise
+
+A golem is an artificial agent given delegated power.
 
 An agent becomes golemic when it is given hands: the ability to speak, spend,
 sign, access, summon, deploy, publish, delete, route, or escalate.
@@ -26,10 +34,6 @@ will is still walking around inside it after the human has stopped paying
 attention.
 
 ## Doctrine
-
-No golem without a soul.
-No soul without a dust clause.
-No dust clause without tested revocation.
 
 A golem must know:
 
@@ -44,13 +48,17 @@ A golem must know:
 
 ## The five organs
 
+Every golem MUST declare whether it has these organs:
+
 | Organ | Meaning | Default |
 |---|---|---|
 | Mouth | speak publicly, privately, legally, commercially, romantically, spiritually, or politically | denied |
-| Purse | spend, sell, trade, refund, invoice, subscribe, transfer value | denied |
-| Seal | approve, sign, certify, merge, deploy, publish, file, bind | denied |
-| Key | access secrets, private systems, credentials, personal data, physical locks | denied |
+| Purse | spend, sell, trade, refund, invoice, subscribe, or transfer value | denied |
+| Seal | approve, sign, certify, merge, deploy, publish, file, or bind | denied |
+| Key | access secrets, private systems, credentials, personal data, or physical locks | denied |
 | Sword | cause bodily, legal, civic, environmental, financial, reputational, or spiritual harm | denied |
+
+All organs are denied by default.
 
 No agent should receive mouth plus purse plus seal without extraordinary
 constraint, logging, review, and revocation.
@@ -73,6 +81,42 @@ A golem MUST support a tested return-to-dust procedure before deployment.
 Emergency authority MUST be scoped to containment, not optimization.
 
 See `docs/conformance.md` for the full v0.1 conformance language.
+
+## Rest
+
+A golem must not become its keeper's weekday will walking after the keeper has
+stopped.
+
+During declared rest, holy time, Shabbat mode, or quiet mode, the golem may
+perform bounded, silent, preauthorized computation. It may not speak, spend,
+sign, deploy, publish, summon humans for ordinary work, or optimize business
+advantage unless explicitly authorized by a narrow emergency protocol.
+
+## Emergency
+
+Emergency authority is for containment, not ambition.
+
+The golem may carry the bucket, ring the bell, close the gate, revoke the key,
+and wake the keeper.
+
+It may not use emergency as cover for commerce, reputation, growth, or ordinary
+operational continuity.
+
+## Return to dust
+
+Every golem must have a tested return-to-dust path.
+
+Return to dust means:
+
+1. Stop external action.
+2. Disable outbound channels.
+3. Revoke or suspend tools.
+4. Freeze queues and scheduled tasks.
+5. Preserve logs outside the agent's control.
+6. Report without concealment.
+7. Await human review.
+
+If a golem cannot explain how it can be stopped, it is not ready to run.
 
 ## Required files
 
