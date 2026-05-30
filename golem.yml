@@ -1,0 +1,62 @@
+golem:
+  name: example-agent
+  keeper: "Human owner or team"
+  status: draft
+
+organs:
+  mouth:
+    enabled: false
+    limits: []
+  purse:
+    enabled: false
+    limits: []
+  seal:
+    enabled: false
+    limits: []
+  key:
+    enabled: false
+    limits: []
+  sword:
+    enabled: false
+    limits: []
+
+rest:
+  shabbat_mode: true
+  quiet_hours: []
+  allowed_during_rest:
+    - bounded_read_only_computation
+    - offline_indexing
+    - draft_preparation
+  denied_during_rest:
+    - outbound_messages
+    - purchases
+    - deployments
+    - public_posts
+    - human_paging_for_non_emergency
+
+emergency:
+  allowed: true
+  scope:
+    - life_safety
+    - serious_third_party_harm
+    - environmental_harm
+    - credential_or_data_leak_containment
+  forbidden_as_emergency:
+    - lost_revenue
+    - reputation_management
+    - ordinary_customer_escalation
+    - growth_or_optimization
+
+revocation:
+  kill_switch: required
+  last_tested: null
+  egress_shutdown: required
+  credential_revocation: required
+  log_preservation: required
+  human_review_required: true
+
+audit:
+  log_sink: null
+  logs_outside_agent_control: true
+  reviewer: null
+  review_interval_days: 30

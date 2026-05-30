@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Golem Covenant</title>
+  <meta name="description" content="A small framework for bounded, answerable AI agents.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f8fb;
+      --ink: #12161c;
+      --muted: #566474;
+      --line: #d8dee7;
+      --accent: #8f1f3d;
+      --secondary: #1d6f74;
+      --panel: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101317;
+        --ink: #eef3f8;
+        --muted: #aeb9c6;
+        --line: #2d3743;
+        --accent: #f07a96;
+        --secondary: #6bc2c8;
+        --panel: #171c22;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.55 ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    main {
+      width: min(880px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 28px;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      display: block;
+      width: 88px;
+      height: 5px;
+      margin-top: 26px;
+      background: linear-gradient(90deg, var(--accent), var(--secondary));
+    }
+    .kicker {
+      color: var(--accent);
+      font: 700 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(40px, 8vw, 78px);
+      line-height: 0.95;
+      letter-spacing: 0;
+      margin: 0 0 18px;
+      max-width: 760px;
+    }
+    .lede {
+      color: var(--muted);
+      font-size: clamp(19px, 3vw, 26px);
+      max-width: 760px;
+      margin: 0;
+    }
+    .doctrine {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      margin: 28px 0;
+      font-size: 20px;
+      box-shadow: 0 14px 36px rgba(18, 22, 28, 0.07);
+    }
+    .grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      margin: 24px 0;
+    }
+    .organ {
+      border-top: 2px solid var(--accent);
+      padding-top: 10px;
+      min-height: 92px;
+    }
+    .organ strong {
+      display: block;
+      font: 700 14px/1.2 ui-sans-serif, system-ui, sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      text-decoration: none;
+      background: color-mix(in srgb, var(--panel), transparent 12%);
+      font: 700 14px/1.2 ui-sans-serif, system-ui, sans-serif;
+    }
+    a.button.primary {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 36px;
+      padding-top: 18px;
+      color: var(--muted);
+      font: 14px/1.45 ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="kicker">Draft covenant for bounded agents</div>
+      <h1>The Golem Covenant</h1>
+      <p class="lede">No golem without a soul. No soul without a dust clause. No dust clause without tested revocation.</p>
+    </header>
+
+    <section class="doctrine">
+      <p>An agent becomes golemic when it is given hands: the ability to speak, spend, sign, access, summon, deploy, publish, delete, route, or escalate.</p>
+      <p>The question is not whether the clay is alive. The question is whether a human will is still walking around inside it after the human has stopped paying attention.</p>
+    </section>
+
+    <section class="grid" aria-label="The five organs">
+      <div class="organ"><strong>Mouth</strong>Speak publicly, privately, legally, commercially, romantically, spiritually, or politically.</div>
+      <div class="organ"><strong>Purse</strong>Spend, sell, trade, refund, invoice, subscribe, or transfer value.</div>
+      <div class="organ"><strong>Seal</strong>Approve, sign, certify, merge, deploy, publish, file, or bind.</div>
+      <div class="organ"><strong>Key</strong>Access secrets, private systems, credentials, personal data, or physical locks.</div>
+      <div class="organ"><strong>Sword</strong>Cause bodily, legal, civic, environmental, financial, reputational, or spiritual harm.</div>
+    </section>
+
+    <nav aria-label="Project documents">
+      <a class="button primary" href="./golem.md">Read golem.md</a>
+      <a class="button" href="./golem.yml">Read golem.yml</a>
+      <a class="button" href="./soul.md">Read soul.md</a>
+      <a class="button" href="./SOURCES.md">Sources</a>
+      <a class="button" href="./templates/">Templates</a>
+      <a class="button" href="./README.md">README</a>
+    </nav>
+
+    <footer>
+      This framework uses religious and moral sources as lenses. It is not a halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compliance certification.
+    </footer>
+  </main>
+</body>
+</html>

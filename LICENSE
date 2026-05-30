@@ -1,0 +1,14 @@
+The Golem Covenant uses separate licenses by material type.
+
+Text, documentation, and templates are licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+Code, schemas, and machine-readable examples are licensed under the Apache
+License, Version 2.0.
+
+SPDX-License-Identifier: CC-BY-4.0 AND Apache-2.0
+
+License texts:
+
+- CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+- Apache-2.0: https://www.apache.org/licenses/LICENSE-2.0
