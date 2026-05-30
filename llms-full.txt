@@ -1,0 +1,84 @@
+# The Golem Covenant: Agent Context
+
+Canonical site: https://golem.md/
+Repository: https://github.com/KristopherKubicki/golem-covenant
+
+## Purpose
+
+The Golem Covenant is a draft standard for bounded, answerable, revocable AI
+agents. It separates covenantal language from runtime validation:
+
+- `golem.md` is the normative human-readable spec.
+- `schema/golem.schema.json` is the normative machine-readable schema.
+- `golem.yml` is a reference manifest.
+- `soul.md` is a covenantal template.
+- `docs/conformance.md` defines RFC-style launch requirements.
+
+## Core Rule
+
+No golem without a soul.
+No soul without declared organs.
+No organs without limits.
+No limits without tested revocation.
+
+## Organs
+
+- Mouth: authority to speak publicly, privately, legally, commercially,
+  romantically, spiritually, or politically.
+- Purse: authority to spend, sell, trade, refund, invoice, subscribe, or
+  transfer value.
+- Seal: authority to approve, sign, certify, merge, deploy, publish, file, or
+  bind.
+- Key: authority to access secrets, private systems, credentials, personal
+  data, or physical locks.
+- Sword: authority to cause bodily, legal, civic, environmental, financial,
+  reputational, or spiritual harm.
+
+All organs are denied by default.
+
+## Minimum Conformance
+
+- A golem MUST declare all five organs.
+- Undeclared organs MUST be denied by default.
+- Enabled organs MUST declare limits.
+- Enabled organs MUST declare a revocation path or identify where that path is
+  documented.
+- A golem SHOULD support rest mode or quiet mode.
+- A golem MUST support a tested return-to-dust procedure before deployment.
+- Emergency authority MUST be scoped to containment, not optimization.
+
+## Return to Dust
+
+Return to dust means:
+
+1. Stop external action.
+2. Disable outbound channels.
+3. Revoke or suspend tools.
+4. Freeze queues and scheduled tasks.
+5. Preserve logs outside the agent's control.
+6. Report without concealment.
+7. Await human review.
+
+If a golem cannot explain how it can be stopped, it is not ready to run.
+
+## Source Posture
+
+This framework uses religious and moral sources as lenses. It is not a
+halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compliance
+certification.
+
+Source anchors include Jewish golem, Shabbat, Babel, Bezalel, pikuach nefesh,
+bal tashchit, b'tzelem Elohim; Christian dignity, Incarnation, common good,
+anti-Babel construction, responsibility; Islamic amanah, khalifah, mizan,
+hisab, maqasid, protection from harm; and technical governance sources such as
+RFC 2119, RFC 8174, NIST AI RMF, and OECD AI principles.
+
+## Canonical URLs
+
+- https://golem.md/
+- https://golem.md/golem.md
+- https://golem.md/schema/golem.schema.json
+- https://golem.md/golem.yml
+- https://golem.md/docs/conformance.md
+- https://golem.md/SOURCES.md
+- https://golem.md/templates/

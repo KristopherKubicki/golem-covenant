@@ -150,3 +150,23 @@ Every golem deployment should include:
 This framework uses religious and moral sources as lenses. It is not a
 halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compliance
 certification.
+
+## Source anchors
+
+This covenant is in conversation with sources about delegated power, speech,
+rest, dignity, trust, balance, harm, and revocation. These links are anchors for
+review, not claims of completed religious synthesis.
+
+- Golem and return to dust: [Sanhedrin 65b](https://www.sefaria.org/Sanhedrin.65b)
+- Human dignity: [Genesis 1:27](https://www.sefaria.org/Genesis.1.27)
+- Dust and breath: [Genesis 2:7](https://www.sefaria.org/Genesis.2.7)
+- Babel and scale without humility: [Genesis 11:1-9](https://www.sefaria.org/Genesis.11.1-9)
+- Emergency and life: [Yoma 85b](https://www.sefaria.org/Yoma.85b)
+- Catholic AI ethics: [Antiqua et Nova](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html)
+- AI, Babel, and common good: [Magnifica Humanitas](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html)
+- Trust and justice: [Qur'an 4:58](https://quran.com/4/58)
+- Balance and measure: [Qur'an 55:7-9](https://quran.com/55/7-9)
+- Normative language: [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119) and [RFC 8174](https://www.rfc-editor.org/rfc/rfc8174)
+- AI risk management: [NIST AI RMF 1.0](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10)
+
+See `SOURCES.md` for the fuller source map.

@@ -1,0 +1,38 @@
+# The Golem Covenant
+
+> A draft standard for bounded, answerable, revocable AI agents.
+
+Canonical site: https://golem.md/
+
+## Core Documents
+
+- Human-readable spec: https://golem.md/golem.md
+- Machine-readable schema: https://golem.md/schema/golem.schema.json
+- Reference manifest: https://golem.md/golem.yml
+- Conformance language: https://golem.md/docs/conformance.md
+- Covenant template: https://golem.md/soul.md
+- Source anchors: https://golem.md/SOURCES.md
+- Templates: https://golem.md/templates/
+- Full agent context: https://golem.md/llms-full.txt
+
+## Summary
+
+The Golem Covenant defines a vocabulary and preflight standard for agentic
+systems that can speak, spend, sign, access, summon, deploy, publish, delete,
+route, or escalate.
+
+Core rule:
+
+1. No golem without a soul.
+2. No soul without declared organs.
+3. No organs without limits.
+4. No limits without tested revocation.
+
+The five organs are Mouth, Purse, Seal, Key, and Sword. All organs are denied
+by default. A deployment should validate its manifest against the JSON Schema
+and complete a return-to-dust test before launch.
+
+## Review Status
+
+v0.1 draft seeking Jewish, Christian, Islamic, legal, security, runtime, and
+affected-community review.

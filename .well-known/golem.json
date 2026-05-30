@@ -1,0 +1,24 @@
+{
+  "name": "The Golem Covenant",
+  "status": "v0.1 draft seeking review",
+  "canonical": "https://golem.md/",
+  "repository": "https://github.com/KristopherKubicki/golem-covenant",
+  "summary": "A draft standard for bounded, answerable, revocable AI agents.",
+  "documents": {
+    "spec": "https://golem.md/golem.md",
+    "schema": "https://golem.md/schema/golem.schema.json",
+    "manifest": "https://golem.md/golem.yml",
+    "conformance": "https://golem.md/docs/conformance.md",
+    "soul": "https://golem.md/soul.md",
+    "sources": "https://golem.md/SOURCES.md",
+    "templates": "https://golem.md/templates/",
+    "llms": "https://golem.md/llms.txt",
+    "llms_full": "https://golem.md/llms-full.txt"
+  },
+  "organs": ["mouth", "purse", "seal", "key", "sword"],
+  "default_policy": "All organs are denied by default.",
+  "licenses": {
+    "text_docs_templates": "CC-BY-4.0",
+    "code_schemas_examples": "Apache-2.0"
+  }
+}

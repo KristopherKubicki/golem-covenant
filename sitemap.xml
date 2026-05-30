@@ -5,7 +5,11 @@
   <url><loc>https://golem.md/golem.yml</loc></url>
   <url><loc>https://golem.md/schema/golem.schema.json</loc></url>
   <url><loc>https://golem.md/docs/conformance.md</loc></url>
+  <url><loc>https://golem.md/.well-known/golem.json</loc></url>
+  <url><loc>https://golem.md/llms.txt</loc></url>
+  <url><loc>https://golem.md/llms-full.txt</loc></url>
   <url><loc>https://golem.md/soul.md</loc></url>
   <url><loc>https://golem.md/SOURCES.md</loc></url>
+  <url><loc>https://golem.md/CITATION.cff</loc></url>
   <url><loc>https://golem.md/templates/</loc></url>
 </urlset>

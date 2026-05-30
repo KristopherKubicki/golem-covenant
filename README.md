@@ -49,6 +49,7 @@ This repository is prepared for `https://golem.md/` on GitHub Pages.
 - `schema/golem.schema.json` is the normative machine-readable schema.
 - `golem.yml` is the reference machine-readable manifest.
 - `soul.md` is the lowercase public template.
+- `llms.txt` and `.well-known/golem.json` expose bot-friendly discovery paths.
 - `templates/` contains the starter files.
 
 See `docs/github-pages.md` for DNS and Pages setup.
@@ -102,6 +103,8 @@ templates/RETURN_TO_DUST_TEST.md  Return-to-dust test checklist
 templates/AUDIT.md            Logs, reviewers, tests, escalation
 templates/MEMORY.md           What may be remembered, forgotten, or never stored
 SOURCES.md                    Primary sources and interpretive anchors
+llms.txt                      Bot-friendly entry point
+.well-known/golem.json        Machine-readable project discovery
 ```
 
 Starter templates live in `templates/`.

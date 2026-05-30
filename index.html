@@ -4,171 +4,471 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Golem Covenant</title>
-  <meta name="description" content="A small framework for bounded, answerable AI agents.">
+  <meta name="description" content="A draft standard for bounded, answerable, revocable AI agents.">
+  <link rel="canonical" href="https://golem.md/">
+  <link rel="alternate" type="text/markdown" href="https://golem.md/golem.md" title="golem.md">
+  <link rel="alternate" type="application/schema+json" href="https://golem.md/schema/golem.schema.json" title="Golem manifest schema">
+  <link rel="alternate" type="text/plain" href="https://golem.md/llms.txt" title="llms.txt">
+  <meta property="og:title" content="The Golem Covenant">
+  <meta property="og:description" content="A draft standard for bounded, answerable, revocable AI agents.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://golem.md/">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "The Golem Covenant",
+    "headline": "The Golem Covenant",
+    "description": "A draft standard for bounded, answerable, revocable AI agents.",
+    "url": "https://golem.md/",
+    "version": "0.1",
+    "isAccessibleForFree": true,
+    "license": "https://golem.md/LICENSE",
+    "encoding": [
+      {
+        "@type": "MediaObject",
+        "encodingFormat": "text/markdown",
+        "contentUrl": "https://golem.md/golem.md"
+      },
+      {
+        "@type": "MediaObject",
+        "encodingFormat": "application/schema+json",
+        "contentUrl": "https://golem.md/schema/golem.schema.json"
+      }
+    ],
+    "citation": [
+      "https://www.sefaria.org/Sanhedrin.65b",
+      "https://www.sefaria.org/Genesis.11.1-9",
+      "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html",
+      "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
+      "https://quran.com/4/58",
+      "https://quran.com/55/7-9",
+      "https://www.rfc-editor.org/rfc/rfc2119",
+      "https://www.rfc-editor.org/rfc/rfc8174",
+      "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10"
+    ]
+  }
+  </script>
   <style>
     :root {
       color-scheme: light dark;
-      --bg: #f6f8fb;
-      --ink: #12161c;
-      --muted: #566474;
-      --line: #d8dee7;
-      --accent: #8f1f3d;
-      --secondary: #1d6f74;
+      --bg: #f7f8fa;
+      --ink: #11161d;
+      --muted: #53606d;
+      --soft: #eef2f5;
+      --line: #d6dde4;
       --panel: #ffffff;
+      --accent: #8f1f3d;
+      --teal: #1d6f74;
+      --gold: #9a6a1b;
+      --code: #f1f4f7;
     }
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #101317;
         --ink: #eef3f8;
-        --muted: #aeb9c6;
-        --line: #2d3743;
+        --muted: #abb6c2;
+        --soft: #171d23;
+        --line: #2b3540;
+        --panel: #151a20;
         --accent: #f07a96;
-        --secondary: #6bc2c8;
-        --panel: #171c22;
+        --teal: #6bc2c8;
+        --gold: #d7b16a;
+        --code: #1d242c;
       }
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font: 16px/1.55 ui-serif, Georgia, Cambria, "Times New Roman", serif;
       color: var(--ink);
-      background: var(--bg);
+      background:
+        linear-gradient(180deg, var(--soft) 0, var(--bg) 320px),
+        var(--bg);
+      font: 16px/1.55 ui-serif, Georgia, Cambria, "Times New Roman", serif;
     }
-    main {
-      width: min(880px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 48px 0 64px;
+    a { color: var(--accent); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    a:focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 3px;
     }
-    header {
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 28px;
-      margin-bottom: 28px;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      display: block;
-      width: 88px;
-      height: 5px;
-      margin-top: 26px;
-      background: linear-gradient(90deg, var(--accent), var(--secondary));
-    }
-    .kicker {
-      color: var(--accent);
-      font: 700 12px/1.2 ui-sans-serif, system-ui, sans-serif;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    h1 {
-      font-size: clamp(40px, 8vw, 78px);
-      line-height: 0.95;
-      letter-spacing: 0;
-      margin: 0 0 18px;
-      max-width: 760px;
-    }
-    .lede {
-      color: var(--muted);
-      font-size: clamp(19px, 3vw, 26px);
-      max-width: 760px;
-      margin: 0;
-    }
-    .lede.practical {
-      font-size: 19px;
-      margin-top: 10px;
-    }
-    .doctrine {
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      transform: translateY(-160%);
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 22px;
-      margin: 28px 0;
-      font-size: 20px;
-      box-shadow: 0 14px 36px rgba(18, 22, 28, 0.07);
+      border-radius: 6px;
+      padding: 8px 10px;
+      z-index: 5;
     }
-    .grid {
-      display: grid;
+    .skip:focus { transform: translateY(0); }
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      font: 700 13px/1.2 ui-sans-serif, system-ui, sans-serif;
+    }
+    .topbar .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 54px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 26px;
+      height: 26px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      color: var(--accent);
+      font-size: 14px;
+      line-height: 1;
+    }
+    .toplinks {
+      display: flex;
+      flex-wrap: wrap;
       gap: 12px;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      margin: 24px 0;
+      justify-content: flex-end;
     }
-    .organ {
-      border-top: 2px solid var(--accent);
-      padding-top: 10px;
-      min-height: 92px;
+    .toplinks a {
+      color: var(--muted);
+      text-decoration: none;
     }
-    .organ strong {
+    main { padding: 40px 0 72px; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+      gap: 28px;
+      align-items: end;
+      padding: 34px 0 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      color: var(--accent);
+      font: 800 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 14px;
+    }
+    h1 {
+      margin: 0;
+      max-width: 820px;
+      font-size: 64px;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+    .lede {
+      margin: 18px 0 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.42;
+    }
+    .status-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--panel), transparent 8%);
+      padding: 16px;
+      font: 14px/1.45 ui-sans-serif, system-ui, sans-serif;
+    }
+    .status-panel strong {
       display: block;
-      font: 700 14px/1.2 ui-sans-serif, system-ui, sans-serif;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .status-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+      color: var(--muted);
+    }
+    .rule {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin: 28px 0;
+      background: var(--line);
+    }
+    .rule div {
+      background: var(--panel);
+      padding: 16px;
+      min-height: 104px;
+    }
+    .rule span {
+      display: block;
+      color: var(--gold);
+      font: 800 12px/1.2 ui-sans-serif, system-ui, sans-serif;
       text-transform: uppercase;
       margin-bottom: 8px;
     }
-    nav {
+    section {
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    h2 {
+      font-size: 30px;
+      line-height: 1.1;
+      margin: 0 0 14px;
+    }
+    h3 {
+      font: 800 14px/1.2 ui-sans-serif, system-ui, sans-serif;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+    .section-head p {
+      color: var(--muted);
+      margin: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--panel), transparent 7%);
+      padding: 15px;
+      min-height: 160px;
+    }
+    .card strong {
+      display: block;
+      color: var(--accent);
+      font: 800 15px/1.2 ui-sans-serif, system-ui, sans-serif;
+      margin-bottom: 9px;
+    }
+    .card p { margin: 0; color: var(--muted); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .step {
+      border-top: 3px solid var(--teal);
+      padding: 13px 0 0;
+    }
+    .step p { color: var(--muted); margin: 0; }
+    .sources {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .sources ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .docs {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 28px;
+      margin-top: 18px;
     }
-    a.button {
+    .button {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       min-height: 42px;
       padding: 9px 13px;
       border: 1px solid var(--line);
       border-radius: 6px;
       color: var(--ink);
       text-decoration: none;
-      background: color-mix(in srgb, var(--panel), transparent 12%);
-      font: 700 14px/1.2 ui-sans-serif, system-ui, sans-serif;
+      background: var(--panel);
+      font: 800 14px/1.2 ui-sans-serif, system-ui, sans-serif;
     }
-    a.button.primary {
+    .button.primary {
       border-color: var(--accent);
       color: var(--accent);
     }
+    code {
+      background: var(--code);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 0.1em 0.28em;
+      font: 0.94em/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
     footer {
-      border-top: 1px solid var(--line);
-      margin-top: 36px;
-      padding-top: 18px;
+      padding-top: 24px;
       color: var(--muted);
-      font: 14px/1.45 ui-sans-serif, system-ui, sans-serif;
+      font: 14px/1.5 ui-sans-serif, system-ui, sans-serif;
+    }
+    @media (max-width: 880px) {
+      .topbar .wrap { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .toplinks { justify-content: flex-start; }
+      .hero, .section-head { grid-template-columns: 1fr; }
+      h1 { font-size: 46px; }
+      .rule { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid, .steps, .sources { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      main { padding-top: 20px; }
+      h1 { font-size: 38px; }
+      .lede { font-size: 18px; }
+      .rule, .grid, .steps, .sources { grid-template-columns: 1fr; }
+      .rule div { min-height: 0; }
+      .button { width: 100%; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <header>
-      <div class="kicker">Draft covenant for bounded agents</div>
-      <h1>The Golem Covenant</h1>
-      <p class="lede">No golem without a soul. No soul without a dust clause. No dust clause without tested revocation.</p>
-      <p class="lede practical">A practical standard for agents that can act in the world.</p>
-    </header>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="The Golem Covenant home">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span>golem.md</span>
+      </a>
+      <nav class="toplinks" aria-label="Primary">
+        <a href="./golem.md">Spec</a>
+        <a href="./schema/golem.schema.json">Schema</a>
+        <a href="./docs/conformance.md">Conformance</a>
+        <a href="./SOURCES.md">Sources</a>
+        <a href="./llms.txt">llms.txt</a>
+        <a href="https://github.com/KristopherKubicki/golem-covenant">GitHub</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="doctrine">
-      <p>An agent becomes golemic when it is given hands: the ability to speak, spend, sign, access, summon, deploy, publish, delete, route, or escalate.</p>
-      <p>The question is not whether the clay is alive. The question is whether a human will is still walking around inside it after the human has stopped paying attention.</p>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="title">
+      <div>
+        <p class="eyebrow">v0.1 draft standard seeking review</p>
+        <h1 id="title">The Golem Covenant</h1>
+        <p class="lede">A practical standard for agents that can act in the world: bounded, answerable, revocable, and legible to both humans and runtimes.</p>
+      </div>
+      <aside class="status-panel" aria-label="Project status">
+        <strong>Canonical paths</strong>
+        <ul class="status-list">
+          <li><code>/golem.md</code> human-readable spec</li>
+          <li><code>/schema/golem.schema.json</code> validator schema</li>
+          <li><code>/golem.yml</code> reference manifest</li>
+          <li><code>/llms.txt</code> bot entry point</li>
+        </ul>
+      </aside>
     </section>
 
-    <section class="grid" aria-label="The five organs">
-      <div class="organ"><strong>Mouth</strong>Speak publicly, privately, legally, commercially, romantically, spiritually, or politically.</div>
-      <div class="organ"><strong>Purse</strong>Spend, sell, trade, refund, invoice, subscribe, or transfer value.</div>
-      <div class="organ"><strong>Seal</strong>Approve, sign, certify, merge, deploy, publish, file, or bind.</div>
-      <div class="organ"><strong>Key</strong>Access secrets, private systems, credentials, personal data, or physical locks.</div>
-      <div class="organ"><strong>Sword</strong>Cause bodily, legal, civic, environmental, financial, reputational, or spiritual harm.</div>
+    <div class="rule" aria-label="Core rule">
+      <div><span>01</span>No golem without a soul.</div>
+      <div><span>02</span>No soul without declared organs.</div>
+      <div><span>03</span>No organs without limits.</div>
+      <div><span>04</span>No limits without tested revocation.</div>
+    </div>
+
+    <section aria-labelledby="premise">
+      <div class="section-head">
+        <h2 id="premise">Delegated power needs anatomy.</h2>
+        <p>An agent becomes golemic when it can speak, spend, sign, access, summon, deploy, publish, delete, route, or escalate. The Covenant names those powers as organs so they can be denied by default, reviewed deliberately, and revoked under stress.</p>
+      </div>
+      <div class="grid" aria-label="The five organs">
+        <article class="card"><strong>Mouth</strong><p>Authority to speak publicly, privately, legally, commercially, romantically, spiritually, or politically.</p></article>
+        <article class="card"><strong>Purse</strong><p>Authority to spend, sell, trade, refund, invoice, subscribe, or transfer value.</p></article>
+        <article class="card"><strong>Seal</strong><p>Authority to approve, sign, certify, merge, deploy, publish, file, or bind.</p></article>
+        <article class="card"><strong>Key</strong><p>Authority to access secrets, private systems, credentials, personal data, or physical locks.</p></article>
+        <article class="card"><strong>Sword</strong><p>Authority to cause bodily, legal, civic, environmental, financial, reputational, or spiritual harm.</p></article>
+      </div>
     </section>
 
-    <nav aria-label="Project documents">
-      <a class="button primary" href="./golem.md">Read golem.md</a>
-      <a class="button" href="./schema/golem.schema.json">Schema</a>
-      <a class="button" href="./docs/conformance.md">Conformance</a>
-      <a class="button" href="./golem.yml">Read golem.yml</a>
-      <a class="button" href="./soul.md">Read soul.md</a>
-      <a class="button" href="./SOURCES.md">Sources</a>
-      <a class="button" href="./templates/">Templates</a>
-      <a class="button" href="./README.md">README</a>
-    </nav>
+    <section aria-labelledby="implement">
+      <div class="section-head">
+        <h2 id="implement">From covenant to runtime.</h2>
+        <p>The project separates liturgical language from enforcement surfaces. The template inspires restraint; the schema binds manifests; the conformance doc tells implementers what must be true before launch.</p>
+      </div>
+      <div class="steps">
+        <article class="step"><h3>Declare</h3><p>Fill out <code>soul.md</code>, <code>CAPABILITIES.md</code>, and <code>golem.yml</code>. All undeclared organs remain denied.</p></article>
+        <article class="step"><h3>Validate</h3><p>Validate the manifest against <code>schema/golem.schema.json</code> and review the RFC-style rules in <code>docs/conformance.md</code>.</p></article>
+        <article class="step"><h3>Revoke</h3><p>Complete <code>RETURN_TO_DUST_TEST.md</code> before deployment. A golem that cannot be stopped is not ready to run.</p></article>
+      </div>
+      <nav class="docs" aria-label="Project documents">
+        <a class="button primary" href="./golem.md">Read golem.md</a>
+        <a class="button" href="./schema/golem.schema.json">Schema</a>
+        <a class="button" href="./docs/conformance.md">Conformance</a>
+        <a class="button" href="./golem.yml">Manifest</a>
+        <a class="button" href="./soul.md">soul.md</a>
+        <a class="button" href="./templates/">Templates</a>
+      </nav>
+    </section>
+
+    <section aria-labelledby="sources">
+      <div class="section-head">
+        <h2 id="sources">Cited lenses, not claimed rulings.</h2>
+        <p>The Covenant uses sources as guardrails against unbounded delegated power. It is not a halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compliance certification.</p>
+      </div>
+      <div class="sources">
+        <article>
+          <h3>Jewish</h3>
+          <ul>
+            <li><a href="https://www.sefaria.org/Sanhedrin.65b">Sanhedrin 65b</a>: golem, speech, return to dust</li>
+            <li><a href="https://www.sefaria.org/Yoma.85b">Yoma 85b</a>: emergency and life</li>
+            <li><a href="https://www.sefaria.org/Genesis.11.1-9">Genesis 11</a>: Babel and power</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Christian</h3>
+          <ul>
+            <li><a href="https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html">Antiqua et Nova</a>: dignity, accountability, AI</li>
+            <li><a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html">Magnifica Humanitas</a>: AI, Babel, common good</li>
+            <li><a href="https://www.sefaria.org/Genesis.1.27">Genesis 1:27</a>: image and dignity</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Islamic and Technical</h3>
+          <ul>
+            <li><a href="https://quran.com/4/58">Qur'an 4:58</a>: trusts and justice</li>
+            <li><a href="https://quran.com/55/7-9">Qur'an 55:7-9</a>: balance and measure</li>
+            <li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a>: operational risk language</li>
+          </ul>
+        </article>
+      </div>
+      <nav class="docs" aria-label="Source documents">
+        <a class="button" href="./SOURCES.md">All Sources</a>
+        <a class="button" href="./docs/abrahamic-lenses.md">Abrahamic Lenses</a>
+        <a class="button" href="https://www.rfc-editor.org/rfc/rfc2119">RFC 2119</a>
+        <a class="button" href="https://www.rfc-editor.org/rfc/rfc8174">RFC 8174</a>
+      </nav>
+    </section>
+
+    <section aria-labelledby="bots">
+      <div class="section-head">
+        <h2 id="bots">Bot-friendly by default.</h2>
+        <p>Agents, crawlers, and runtimes should not have to scrape a decorative page to find the spec. The canonical files are stable, plain, and linked in the document head.</p>
+      </div>
+      <div class="steps">
+        <article class="step"><h3>Human</h3><p>Start with <a href="./golem.md"><code>/golem.md</code></a> and <a href="./SOURCES.md"><code>/SOURCES.md</code></a>.</p></article>
+        <article class="step"><h3>Runtime</h3><p>Validate against <a href="./schema/golem.schema.json"><code>/schema/golem.schema.json</code></a>.</p></article>
+        <article class="step"><h3>Agent</h3><p>Discover canonical paths through <a href="./llms.txt"><code>/llms.txt</code></a> and <a href="./.well-known/golem.json"><code>/.well-known/golem.json</code></a>.</p></article>
+      </div>
+    </section>
 
     <footer>
-      This framework uses religious and moral sources as lenses. It is not a halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compliance certification.
+      v0.1 draft seeking Jewish, Christian, Islamic, legal, security, runtime, and affected-community review. Text/docs/templates: CC BY 4.0. Code/schemas/examples: Apache-2.0.
     </footer>
   </main>
 </body>

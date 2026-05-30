@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: The Golem Covenant
+message: "If you cite this draft standard, cite the public site and repository."
+type: standard
+url: "https://golem.md/"
+repository-code: "https://github.com/KristopherKubicki/golem-covenant"
+version: "0.1"
+date-released: "2026-05-30"
+abstract: "A draft standard for bounded, answerable, revocable AI agents."
+authors:
+  - family-names: Kubicki
+    given-names: Kristopher
+license: "CC-BY-4.0 AND Apache-2.0"

@@ -2,6 +2,29 @@
 
 This project uses religious and moral sources as lenses, not as a claim to issue binding rulings.
 
+## Technical standards and governance anchors
+
+### Normative language
+
+The conformance document uses RFC-style keywords so implementers can distinguish required controls from recommendations.
+
+- RFC 2119: https://www.rfc-editor.org/rfc/rfc2119
+- RFC 8174: https://www.rfc-editor.org/rfc/rfc8174
+
+### AI risk management
+
+The Covenant's runtime vocabulary is informed by existing AI governance work, especially risk identification, measurement, management, monitoring, accountability, and human-centered design.
+
+- NIST AI Risk Management Framework 1.0: https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10
+- OECD AI Principles: https://oecd.ai/en/ai-principles
+
+### Publication and discovery
+
+The public site is hosted on GitHub Pages and exposes stable plain-text and machine-readable paths for implementers and agents.
+
+- GitHub Pages custom domains: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+- `llms.txt` proposal: https://llmstxt.org/
+
 ## SOUL.md and agent identity files
 
 OpenClaw's public SOUL.md template frames the file as agent identity, continuity, voice, resourcefulness, competence, privacy, caution around external actions, and the fact that the agent is not the user's voice in group chats.
@@ -41,6 +64,7 @@ Craft, wisdom, understanding, knowledge, and measured construction. The counter-
 Life overrides Shabbat. Emergency authority is real, but it is not ordinary business continuity.
 
 - Yoma 85b: https://www.sefaria.org/Yoma.85b
+- Shabbat 151b: https://www.sefaria.org/Shabbat.151b
 
 ### Bal tashchit
 
@@ -54,6 +78,12 @@ One may not stand idle when another's blood is at stake. This supports a duty to
 
 - Leviticus 19:16: https://www.sefaria.org/Leviticus.19.16
 
+### Dust and command
+
+The creation of the human from dust and breath is not a claim that agents are persons. It is a source lens for creatureliness, command, and limits.
+
+- Genesis 2:7: https://www.sefaria.org/Genesis.2.7
+
 ## Christian sources and lenses
 
 ### Imago Dei and Incarnation
@@ -61,6 +91,7 @@ One may not stand idle when another's blood is at stake. This supports a duty to
 Christian ethics inherits Genesis 1:27 and intensifies the dignity of embodied human life through the Incarnation. AI must not redefine human beings as processors, profiles, or productivity curves.
 
 - Genesis 1:27: https://www.sefaria.org/Genesis.1.27
+- John 1:14: https://www.biblegateway.com/passage/?search=John%201%3A14&version=NRSVUE
 
 ### Antiqua et Nova
 
@@ -81,11 +112,13 @@ Pope Leo XIV's encyclical on safeguarding the human person in the time of AI fra
 The trust is borne by humanity. Agency and moral responsibility are not trivial powers.
 
 - Qur'an 33:72: https://quran.com/al-ahzab/72
+- Qur'an 4:58: https://quran.com/4/58
 
 ### Khalifah
 
 Humans are placed as successors or stewards on earth and tested by what they have been given. Power is trial, not mere possession.
 
+- Qur'an 2:30: https://quran.com/2/30
 - Qur'an 6:165: https://quran.com/6/165
 
 ### Mizan
@@ -93,6 +126,14 @@ Humans are placed as successors or stewards on earth and tested by what they hav
 The balance must not be transgressed or made deficient. This is a lens for justice, measure, proportionality, and ecological restraint.
 
 - Qur'an 55:7-9: https://quran.com/55/7-9
+
+### Protection from harm
+
+The Covenant's emergency and sword language is in conversation with Islamic concerns for life, trust, justice, and avoiding corruption or harm.
+
+- Qur'an 5:32: https://quran.com/5/32
+- Qur'an 2:205: https://quran.com/2/205
+- Qur'an 7:31: https://quran.com/7/31
 
 ### Maqasid al-shari'ah
 
