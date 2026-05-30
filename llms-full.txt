@@ -9,6 +9,7 @@ The Golem Covenant is a draft standard for bounded, answerable, revocable AI
 agents. It separates covenantal language from runtime validation:
 
 - `golem.md` is the normative human-readable spec.
+- `spec.html` is a readable HTML rendering for humans.
 - `schema/golem.schema.json` is the normative machine-readable schema.
 - `golem.yml` is a reference manifest.
 - `soul.md` is a covenantal template.
@@ -76,6 +77,7 @@ RFC 2119, RFC 8174, NIST AI RMF, and OECD AI principles.
 ## Canonical URLs
 
 - https://golem.md/
+- https://golem.md/spec.html
 - https://golem.md/golem.md
 - https://golem.md/schema/golem.schema.json
 - https://golem.md/golem.yml

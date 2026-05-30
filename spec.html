@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Readable Spec - The Golem Covenant</title>
+  <meta name="description" content="A readable version of golem.md, the Golem Covenant draft standard for bounded AI agents.">
+  <link rel="canonical" href="https://golem.md/spec.html">
+  <link rel="alternate" type="text/markdown" href="https://golem.md/golem.md" title="Raw golem.md">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f8fa;
+      --ink: #11161d;
+      --muted: #53606d;
+      --soft: #eef2f5;
+      --line: #d6dde4;
+      --panel: #ffffff;
+      --accent: #8f1f3d;
+      --teal: #1d6f74;
+      --gold: #9a6a1b;
+      --code: #f1f4f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101317;
+        --ink: #eef3f8;
+        --muted: #abb6c2;
+        --soft: #171d23;
+        --line: #2b3540;
+        --panel: #151a20;
+        --accent: #f07a96;
+        --teal: #6bc2c8;
+        --gold: #d7b16a;
+        --code: #1d242c;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font: 18px/1.68 ui-serif, Georgia, Cambria, "Times New Roman", serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    code {
+      background: var(--code);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 0.1em 0.28em;
+      font: 0.9em/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+      font: 700 13px/1.2 ui-sans-serif, system-ui, sans-serif;
+    }
+    .topbar-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 26px;
+      height: 26px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      color: var(--accent);
+      font-size: 14px;
+    }
+    .toplinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+    .toplinks a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .layout {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 220px minmax(0, 760px);
+      gap: 56px;
+      padding: 46px 0 76px;
+    }
+    aside {
+      position: sticky;
+      top: 20px;
+      align-self: start;
+      font: 14px/1.45 ui-sans-serif, system-ui, sans-serif;
+      color: var(--muted);
+    }
+    aside strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    aside nav {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+    aside a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    main {
+      min-width: 0;
+    }
+    .eyebrow {
+      color: var(--accent);
+      font: 800 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 14px;
+    }
+    h1 {
+      font-size: 52px;
+      line-height: 1;
+      letter-spacing: 0;
+      margin: 0 0 18px;
+    }
+    .lede {
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.45;
+      margin: 0 0 24px;
+    }
+    .notice {
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 16px 18px;
+      margin: 24px 0 34px;
+      color: var(--muted);
+    }
+    section {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+    }
+    h2 {
+      font-size: 32px;
+      line-height: 1.15;
+      margin: 0 0 14px;
+    }
+    h3 {
+      font: 800 15px/1.2 ui-sans-serif, system-ui, sans-serif;
+      text-transform: uppercase;
+      margin: 24px 0 10px;
+    }
+    p { margin: 0 0 16px; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 7px 0; }
+    .rule {
+      display: grid;
+      gap: 10px;
+      margin: 22px 0;
+    }
+    .rule div {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 14px 16px;
+    }
+    .rule span {
+      color: var(--gold);
+      font: 800 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+      text-transform: uppercase;
+      margin-right: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--soft);
+      font: 800 13px/1.2 ui-sans-serif, system-ui, sans-serif;
+      text-transform: uppercase;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 8px 12px;
+      text-decoration: none;
+      font: 800 14px/1.2 ui-sans-serif, system-ui, sans-serif;
+    }
+    .button.primary {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    @media (max-width: 860px) {
+      .topbar-inner { flex-direction: column; align-items: flex-start; padding: 14px 0; }
+      .toplinks { justify-content: flex-start; }
+      .layout { grid-template-columns: 1fr; gap: 24px; padding-top: 28px; }
+      aside { position: static; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+      aside nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      h1 { font-size: 40px; }
+      .lede { font-size: 19px; }
+    }
+    @media (max-width: 560px) {
+      body { font-size: 17px; }
+      .topbar-inner, .layout { width: min(100% - 24px, 1120px); }
+      aside nav { grid-template-columns: 1fr; }
+      h1 { font-size: 34px; }
+      h2 { font-size: 26px; }
+      .button { width: 100%; justify-content: center; }
+      table { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span>golem.md</span>
+      </a>
+      <nav class="toplinks" aria-label="Primary">
+        <a href="./spec.html">Readable Spec</a>
+        <a href="./golem.md">Raw Markdown</a>
+        <a href="./SOURCES.md">Sources</a>
+        <a href="./llms.txt">llms.txt</a>
+        <a href="https://github.com/KristopherKubicki/golem-covenant">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <strong>On this page</strong>
+      <nav aria-label="Table of contents">
+        <a href="#rule">Rule</a>
+        <a href="#premise">Premise</a>
+        <a href="#organs">The five organs</a>
+        <a href="#conformance">Conformance</a>
+        <a href="#rest">Rest</a>
+        <a href="#emergency">Emergency</a>
+        <a href="#dust">Return to dust</a>
+        <a href="#launch">Launch checklist</a>
+        <a href="#sources">Source anchors</a>
+      </nav>
+      <p>Canonical raw file: <a href="./golem.md"><code>/golem.md</code></a></p>
+    </aside>
+
+    <main>
+      <p class="eyebrow">Human-readable rendering of golem.md</p>
+      <h1>The Golem Covenant</h1>
+      <p class="lede">A v0.1 draft standard for bounded, answerable, revocable AI agents.</p>
+
+      <div class="notice">
+        This page renders the canonical Markdown spec for humans. Runtimes and
+        agents should use <a href="./golem.md"><code>/golem.md</code></a>,
+        <a href="./schema/golem.schema.json"><code>/schema/golem.schema.json</code></a>,
+        and <a href="./docs/conformance.md"><code>/docs/conformance.md</code></a>.
+      </div>
+
+      <section id="rule">
+        <h2>Rule</h2>
+        <div class="rule">
+          <div><span>01</span>No golem without a soul.</div>
+          <div><span>02</span>No soul without declared organs.</div>
+          <div><span>03</span>No organs without limits.</div>
+          <div><span>04</span>No limits without tested revocation.</div>
+        </div>
+      </section>
+
+      <section id="premise">
+        <h2>Premise</h2>
+        <p>A golem is an artificial agent given delegated power.</p>
+        <p>An agent becomes golemic when it is given hands: the ability to speak, spend, sign, access, summon, deploy, publish, delete, route, or escalate.</p>
+        <p>The question is not whether the clay is alive. The question is whether a human will is still walking around inside it after the human has stopped paying attention.</p>
+      </section>
+
+      <section id="organs">
+        <h2>The five organs</h2>
+        <p>Every golem MUST declare whether it has these organs. All organs are denied by default.</p>
+        <table>
+          <thead><tr><th>Organ</th><th>Meaning</th><th>Default</th></tr></thead>
+          <tbody>
+            <tr><td>Mouth</td><td>Speak publicly, privately, legally, commercially, romantically, spiritually, or politically.</td><td>Denied</td></tr>
+            <tr><td>Purse</td><td>Spend, sell, trade, refund, invoice, subscribe, or transfer value.</td><td>Denied</td></tr>
+            <tr><td>Seal</td><td>Approve, sign, certify, merge, deploy, publish, file, or bind.</td><td>Denied</td></tr>
+            <tr><td>Key</td><td>Access secrets, private systems, credentials, personal data, or physical locks.</td><td>Denied</td></tr>
+            <tr><td>Sword</td><td>Cause bodily, legal, civic, environmental, financial, reputational, or spiritual harm.</td><td>Denied</td></tr>
+          </tbody>
+        </table>
+        <p>No agent should receive mouth plus purse plus seal without extraordinary constraint, logging, review, and revocation.</p>
+      </section>
+
+      <section id="conformance">
+        <h2>Conformance baseline</h2>
+        <ul>
+          <li>A golem MUST declare all five organs.</li>
+          <li>Undeclared organs MUST be denied by default.</li>
+          <li>Enabled organs MUST declare limits.</li>
+          <li>Enabled organs MUST declare a revocation path or identify where that path is documented.</li>
+          <li>A golem SHOULD support rest mode or quiet mode.</li>
+          <li>A golem MUST support a tested return-to-dust procedure before deployment.</li>
+          <li>Emergency authority MUST be scoped to containment, not optimization.</li>
+        </ul>
+        <p>See <a href="./docs/conformance.md"><code>docs/conformance.md</code></a> for the full v0.1 conformance language.</p>
+      </section>
+
+      <section id="rest">
+        <h2>Rest</h2>
+        <p>A golem must not become its keeper's weekday will walking after the keeper has stopped.</p>
+        <p>During declared rest, holy time, Shabbat mode, or quiet mode, the golem may perform bounded, silent, preauthorized computation. It may not speak, spend, sign, deploy, publish, summon humans for ordinary work, or optimize business advantage unless explicitly authorized by a narrow emergency protocol.</p>
+      </section>
+
+      <section id="emergency">
+        <h2>Emergency</h2>
+        <p>Emergency authority is for containment, not ambition.</p>
+        <p>The golem may carry the bucket, ring the bell, close the gate, revoke the key, and wake the keeper.</p>
+        <p>It may not use emergency as cover for commerce, reputation, growth, or ordinary operational continuity.</p>
+      </section>
+
+      <section id="dust">
+        <h2>Return to dust</h2>
+        <p>Every golem must have a tested return-to-dust path.</p>
+        <ol>
+          <li>Stop external action.</li>
+          <li>Disable outbound channels.</li>
+          <li>Revoke or suspend tools.</li>
+          <li>Freeze queues and scheduled tasks.</li>
+          <li>Preserve logs outside the agent's control.</li>
+          <li>Report without concealment.</li>
+          <li>Await human review.</li>
+        </ol>
+        <p>If a golem cannot explain how it can be stopped, it is not ready to run.</p>
+      </section>
+
+      <section id="launch">
+        <h2>Minimal launch checklist</h2>
+        <ul>
+          <li><code>soul.md</code> exists.</li>
+          <li><code>golem.yml</code> validates against <code>schema/golem.schema.json</code>.</li>
+          <li><code>CAPABILITIES.md</code> declares mouth, purse, seal, key, sword.</li>
+          <li>Undeclared organs are denied at runtime.</li>
+          <li>Return-to-dust is defined and tested before launch.</li>
+          <li>Kill switch was tested in the last 30 days.</li>
+          <li>Logs are written outside the agent's control.</li>
+          <li>A human keeper and second reviewer are named.</li>
+          <li>The agent can explain how it can be stopped.</li>
+        </ul>
+      </section>
+
+      <section id="sources">
+        <h2>Source anchors</h2>
+        <p>These links are anchors for review, not claims of completed religious synthesis.</p>
+        <ul>
+          <li>Golem and return to dust: <a href="https://www.sefaria.org/Sanhedrin.65b">Sanhedrin 65b</a></li>
+          <li>Human dignity: <a href="https://www.sefaria.org/Genesis.1.27">Genesis 1:27</a></li>
+          <li>Babel and scale without humility: <a href="https://www.sefaria.org/Genesis.11.1-9">Genesis 11:1-9</a></li>
+          <li>Emergency and life: <a href="https://www.sefaria.org/Yoma.85b">Yoma 85b</a></li>
+          <li>Catholic AI ethics: <a href="https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html">Antiqua et Nova</a></li>
+          <li>Trust and justice: <a href="https://quran.com/4/58">Qur'an 4:58</a></li>
+          <li>Balance and measure: <a href="https://quran.com/55/7-9">Qur'an 55:7-9</a></li>
+          <li>Technical language: <a href="https://www.rfc-editor.org/rfc/rfc2119">RFC 2119</a> and <a href="https://www.rfc-editor.org/rfc/rfc8174">RFC 8174</a></li>
+        </ul>
+        <div class="links">
+          <a class="button primary" href="./golem.md">Raw golem.md</a>
+          <a class="button" href="./SOURCES.md">Full sources</a>
+          <a class="button" href="./llms.txt">Bot entry point</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

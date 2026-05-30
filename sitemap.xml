@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://golem.md/</loc></url>
+  <url><loc>https://golem.md/spec.html</loc></url>
   <url><loc>https://golem.md/golem.md</loc></url>
   <url><loc>https://golem.md/golem.yml</loc></url>
   <url><loc>https://golem.md/schema/golem.schema.json</loc></url>

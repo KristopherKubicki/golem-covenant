@@ -7,6 +7,7 @@ Canonical site: https://golem.md/
 ## Core Documents
 
 - Human-readable spec: https://golem.md/golem.md
+- Readable HTML spec: https://golem.md/spec.html
 - Machine-readable schema: https://golem.md/schema/golem.schema.json
 - Reference manifest: https://golem.md/golem.yml
 - Conformance language: https://golem.md/docs/conformance.md

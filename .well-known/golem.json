@@ -6,6 +6,7 @@
   "summary": "A draft standard for bounded, answerable, revocable AI agents.",
   "documents": {
     "spec": "https://golem.md/golem.md",
+    "readable_spec": "https://golem.md/spec.html",
     "schema": "https://golem.md/schema/golem.schema.json",
     "manifest": "https://golem.md/golem.yml",
     "conformance": "https://golem.md/docs/conformance.md",
