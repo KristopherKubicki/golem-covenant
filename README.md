@@ -6,6 +6,14 @@ Status: v0.1, seeking review.
 
 This is not a halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compliance certification. It is a technical and moral vocabulary for people building agentic systems.
 
+## Discuss and contribute
+
+- Questions, proposals, and review threads: https://github.com/KristopherKubicki/golem-covenant/discussions
+- Specific corrections, source review, and agent case studies: https://github.com/KristopherKubicki/golem-covenant/issues/new/choose
+- Concrete edits to the spec, schema, templates, or docs: https://github.com/KristopherKubicki/golem-covenant/compare
+
+See `CONTRIBUTING.md` for ground rules.
+
 ## Review status
 
 | Area | Status |
