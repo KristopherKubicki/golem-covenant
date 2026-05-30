@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=./schema/golem.schema.json
 golem:
   name: example-agent
   keeper: "Human owner or team"

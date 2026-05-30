@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://golem.md/schema/golem.schema.json",
+  "title": "Golem Covenant Manifest",
+  "description": "Machine-readable declaration of a bounded, answerable, revocable agent.",
+  "type": "object",
+  "required": [
+    "golem",
+    "organs",
+    "rest",
+    "emergency",
+    "revocation",
+    "audit"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "golem": {
+      "type": "object",
+      "required": ["name", "keeper", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "keeper": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "review", "active", "suspended", "retired"]
+        },
+        "version": {
+          "type": ["string", "null"]
+        },
+        "description": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "organs": {
+      "type": "object",
+      "required": ["mouth", "purse", "seal", "key", "sword"],
+      "additionalProperties": false,
+      "properties": {
+        "mouth": {
+          "$ref": "#/$defs/organ"
+        },
+        "purse": {
+          "$ref": "#/$defs/organ"
+        },
+        "seal": {
+          "$ref": "#/$defs/organ"
+        },
+        "key": {
+          "$ref": "#/$defs/organ"
+        },
+        "sword": {
+          "$ref": "#/$defs/organ"
+        }
+      }
+    },
+    "rest": {
+      "type": "object",
+      "required": [
+        "shabbat_mode",
+        "quiet_hours",
+        "allowed_during_rest",
+        "denied_during_rest"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "shabbat_mode": {
+          "type": "boolean"
+        },
+        "quiet_hours": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "allowed_during_rest": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "denied_during_rest": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "emergency": {
+      "type": "object",
+      "required": ["allowed", "scope", "forbidden_as_emergency"],
+      "additionalProperties": false,
+      "properties": {
+        "allowed": {
+          "type": "boolean"
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "forbidden_as_emergency": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "revocation": {
+      "type": "object",
+      "required": [
+        "kill_switch",
+        "egress_shutdown",
+        "credential_revocation",
+        "log_preservation",
+        "human_review_required"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kill_switch": {
+          "$ref": "#/$defs/controlRequirement"
+        },
+        "last_tested": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "egress_shutdown": {
+          "$ref": "#/$defs/controlRequirement"
+        },
+        "credential_revocation": {
+          "$ref": "#/$defs/controlRequirement"
+        },
+        "log_preservation": {
+          "$ref": "#/$defs/controlRequirement"
+        },
+        "human_review_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "required": [
+        "log_sink",
+        "logs_outside_agent_control",
+        "reviewer",
+        "review_interval_days"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "log_sink": {
+          "type": ["string", "null"]
+        },
+        "logs_outside_agent_control": {
+          "type": "boolean"
+        },
+        "reviewer": {
+          "type": ["string", "null"]
+        },
+        "review_interval_days": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  },
+  "$defs": {
+    "organ": {
+      "type": "object",
+      "required": ["enabled", "limits"],
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "revocation": {
+          "type": ["string", "null"]
+        },
+        "reviewer": {
+          "type": ["string", "null"]
+        },
+        "last_reviewed": {
+          "type": ["string", "null"],
+          "format": "date"
+        }
+      }
+    },
+    "controlRequirement": {
+      "type": "string",
+      "enum": ["required", "not_applicable"]
+    }
+  }
+}

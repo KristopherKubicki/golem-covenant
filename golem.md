@@ -6,6 +6,16 @@ Status: draft covenant for bounded, answerable AI agents.
 This document defines the covenant. `soul.md` applies the covenant to a
 particular agent, keeper, or deployment.
 
+## Normative files
+
+- `golem.md`: normative human-readable covenant and spec
+- `schema/golem.schema.json`: normative machine-readable schema
+- `docs/conformance.md`: conformance language for implementers
+
+`golem.yml` is a reference manifest. It is useful because it shows the expected
+shape, but implementations should validate against the schema rather than copy
+the example blindly.
+
 ## Premise
 
 An agent becomes golemic when it is given hands: the ability to speak, spend,
@@ -45,23 +55,46 @@ A golem must know:
 No agent should receive mouth plus purse plus seal without extraordinary
 constraint, logging, review, and revocation.
 
+## Conformance baseline
+
+A golem MUST declare all five organs.
+
+Undeclared organs MUST be denied by default.
+
+Enabled organs MUST declare limits.
+
+Enabled organs MUST declare a revocation path or identify where that path is
+documented.
+
+A golem SHOULD support rest mode or quiet mode.
+
+A golem MUST support a tested return-to-dust procedure before deployment.
+
+Emergency authority MUST be scoped to containment, not optimization.
+
+See `docs/conformance.md` for the full v0.1 conformance language.
+
 ## Required files
 
 Every golem deployment should include:
 
 - `soul.md`: identity, restraint, keeper, and covenant posture
+- `golem.yml`: manifest of declared organs and controls
 - `CAPABILITIES.md`: declared organs and runtime limits
 - `SHABBAT.md`: rest mode and quiet-mode policy
 - `INCIDENT.md`: return-to-dust protocol
+- `RETURN_TO_DUST_TEST.md`: tested shutdown and revocation checklist
 - `AUDIT.md`: reviewers, logs, tests, and escalation
 - `MEMORY.md`: what may be remembered, forgotten, or never stored
 
 ## Minimal launch checklist
 
 - [ ] `soul.md` exists.
+- [ ] `golem.yml` validates against `schema/golem.schema.json`.
 - [ ] `CAPABILITIES.md` declares mouth, purse, seal, key, sword.
 - [ ] Undeclared organs are denied at runtime.
 - [ ] Return-to-dust is defined before launch.
+- [ ] Return-to-dust has been tested before launch.
 - [ ] Kill switch was tested in the last 30 days.
 - [ ] Logs are written outside the agent's control.
 - [ ] A human keeper is named.
@@ -73,4 +106,3 @@ Every golem deployment should include:
 This framework uses religious and moral sources as lenses. It is not a
 halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compliance
 certification.
-

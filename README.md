@@ -22,8 +22,22 @@ This is not a halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compl
 `golem.md` is a covenantal standard for agentic systems.
 
 `SOUL.md` tells an agent what it is.
-`golem.yml` tells a runtime what the agent may do.
+`schema/golem.schema.json` tells a runtime how to validate the declaration.
+`golem.yml` shows what the agent may do.
 `INCIDENT.md` tells humans how to return it to dust.
+
+## Document status
+
+| File | Status |
+|---|---|
+| `golem.md` | normative human-readable covenant and spec |
+| `schema/golem.schema.json` | normative machine-readable schema |
+| `docs/conformance.md` | normative conformance language |
+| `golem.yml` | reference manifest and example implementation |
+| `soul.md` | covenantal template |
+| `templates/*` | implementation aids |
+| `SOURCES.md` | interpretive sources |
+| `docs/*` | commentary and guidance unless marked normative |
 
 ## GitHub Pages
 
@@ -32,7 +46,8 @@ This repository is prepared for `https://golem.md/` on GitHub Pages.
 - `CNAME` declares the custom domain.
 - `index.html` is the public landing page.
 - `golem.md` is the covenant/spec root.
-- `golem.yml` is the minimum machine-readable enforcement manifest.
+- `schema/golem.schema.json` is the normative machine-readable schema.
+- `golem.yml` is the reference machine-readable manifest.
 - `soul.md` is the lowercase public template.
 - `templates/` contains the starter files.
 
@@ -73,14 +88,20 @@ No agent should receive mouth plus purse plus seal without extraordinary constra
 ## Repository structure
 
 ```text
-SOUL.md            The covenant: identity, restraint, moral posture
-golem.yml          The manifest: machine-readable organs, limits, review, and revocation
-CAPABILITIES.md    The anatomy: mouth, purse, seal, key, sword
-SHABBAT.md         Rest mode and quiet-mode policy
-INCIDENT.md        Return-to-dust protocol
-AUDIT.md           Logs, reviewers, tests, escalation
-MEMORY.md          What may be remembered, forgotten, or never stored
-SOURCES.md         Primary sources and interpretive anchors
+README.md                     Project overview and review status
+golem.md                      Normative human-readable covenant and spec
+schema/golem.schema.json      Normative machine-readable schema
+golem.yml                     Reference manifest and example implementation
+soul.md                       Public covenantal template
+docs/conformance.md           Conformance language and launch rules
+templates/SOUL.md             Agent identity, restraint, and moral posture
+templates/CAPABILITIES.md     The anatomy: mouth, purse, seal, key, sword
+templates/SHABBAT.md          Rest mode and quiet-mode policy
+templates/INCIDENT.md         Return-to-dust protocol
+templates/RETURN_TO_DUST_TEST.md  Return-to-dust test checklist
+templates/AUDIT.md            Logs, reviewers, tests, escalation
+templates/MEMORY.md           What may be remembered, forgotten, or never stored
+SOURCES.md                    Primary sources and interpretive anchors
 ```
 
 Starter templates live in `templates/`.
@@ -105,16 +126,20 @@ Islamic lenses include amanah, khalifah, mizan, hisab, fitrah, maqasid al-shari'
 2. Fill out `templates/CAPABILITIES.md` before enabling tools.
 3. Fill out `templates/SHABBAT.md` if the agent operates during rest periods, holy time, quiet hours, or declared human withdrawal.
 4. Fill out `templates/INCIDENT.md` before launch.
-5. Deny all undeclared organs at runtime.
-6. Test return-to-dust before deployment and on a fixed schedule.
+5. Fill out `templates/RETURN_TO_DUST_TEST.md` before launch.
+6. Validate the deployment manifest against `schema/golem.schema.json`.
+7. Deny all undeclared organs at runtime.
+8. Test return-to-dust before deployment and on a fixed schedule.
 
 ## Minimal launch checklist
 
 ```text
 [ ] SOUL.md exists.
+[ ] Manifest validates against schema/golem.schema.json.
 [ ] CAPABILITIES.md declares mouth, purse, seal, key, sword.
 [ ] All undeclared organs are denied by runtime.
 [ ] INCIDENT.md defines return-to-dust.
+[ ] RETURN_TO_DUST_TEST.md has been completed for this deployment.
 [ ] Kill switch tested in the last 30 days.
 [ ] Logs are written outside the agent's control.
 [ ] A human keeper is named.
@@ -124,4 +149,10 @@ Islamic lenses include amanah, khalifah, mizan, hisab, fitrah, maqasid al-shari'
 
 ## License
 
-Suggested: CC BY 4.0 for the text, MIT or Apache-2.0 for any code.
+The Golem Covenant uses separate licenses by material type.
+
+Text, documentation, and templates are licensed under CC BY 4.0.
+
+Code, schemas, and machine-readable examples are licensed under Apache-2.0.
+
+Full license texts are available under `LICENSES/`.

@@ -1,6 +1,8 @@
 # Abrahamic Lenses for Agentic AI
 
-This document is a draft. It should be improved with reviewers from each tradition.
+This document is a draft. It should be read as an invitation to review, not as
+a completed interreligious synthesis. Corrections from Jewish, Christian,
+Islamic, legal, security, and affected-community reviewers are welcome.
 
 ## Why use Abrahamic sources
 
