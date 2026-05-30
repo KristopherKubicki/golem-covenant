@@ -46,10 +46,11 @@ golem.md.  AAAA  2606:50c0:8003::153
 For `www`:
 
 ```text
-www.golem.md.  CNAME  OWNER.github.io.
+www.golem.md.  CNAME  kristopherkubicki.github.io.
 ```
 
-Replace `OWNER` with the GitHub account or organization that owns the Pages repo.
+GitHub Pages serves the apex domain from the repository's `CNAME` file; the
+`www` record is optional, but useful if you want `www.golem.md` to resolve too.
 
 ## Redirect to a GitHub repository
 
