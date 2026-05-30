@@ -12,7 +12,8 @@ Canonical site: https://golem.md/
 - Reference manifest: https://golem.md/golem.yml
 - Conformance language: https://golem.md/docs/conformance.md
 - Covenant template: https://golem.md/soul.md
-- Source anchors: https://golem.md/SOURCES.md
+- Readable citation map: https://golem.md/sources.html
+- Raw citation map: https://golem.md/SOURCES.md
 - Templates: https://golem.md/templates/
 - Full agent context: https://golem.md/llms-full.txt
 

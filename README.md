@@ -44,7 +44,7 @@ See `CONTRIBUTING.md` for ground rules.
 | `golem.yml` | reference manifest and example implementation |
 | `soul.md` | covenantal template |
 | `templates/*` | implementation aids |
-| `SOURCES.md` | interpretive sources |
+| `SOURCES.md` | citation map with claim boundaries |
 | `docs/*` | commentary and guidance unless marked normative |
 
 ## GitHub Pages
@@ -110,7 +110,7 @@ templates/INCIDENT.md         Return-to-dust protocol
 templates/RETURN_TO_DUST_TEST.md  Return-to-dust test checklist
 templates/AUDIT.md            Logs, reviewers, tests, escalation
 templates/MEMORY.md           What may be remembered, forgotten, or never stored
-SOURCES.md                    Primary sources and interpretive anchors
+SOURCES.md                    Citation map with claim boundaries
 llms.txt                      Bot-friendly entry point
 .well-known/golem.json        Machine-readable project discovery
 ```

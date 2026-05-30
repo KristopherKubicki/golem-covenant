@@ -68,11 +68,12 @@ This framework uses religious and moral sources as lenses. It is not a
 halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compliance
 certification.
 
-Source anchors include Jewish golem, Shabbat, Babel, Bezalel, pikuach nefesh,
-bal tashchit, b'tzelem Elohim; Christian dignity, Incarnation, common good,
-anti-Babel construction, responsibility; Islamic amanah, khalifah, mizan,
-hisab, maqasid, protection from harm; and technical governance sources such as
-RFC 2119, RFC 8174, NIST AI RMF, and OECD AI principles.
+The citation map in `SOURCES.md` uses labels, claim boundaries, source classes,
+and "not used for" limits. It includes Jewish golem, Shabbat, Babel, Bezalel,
+pikuach nefesh, bal tashchit, b'tzelem Elohim; Christian dignity, Incarnation,
+common good, anti-Babel construction, responsibility; Islamic amanah, khalifah,
+mizan, hisab, maqasid, protection from harm; and technical governance sources
+such as RFC 2119, RFC 8174, NIST AI RMF, and OECD AI principles.
 
 ## Canonical URLs
 
@@ -82,5 +83,6 @@ RFC 2119, RFC 8174, NIST AI RMF, and OECD AI principles.
 - https://golem.md/schema/golem.schema.json
 - https://golem.md/golem.yml
 - https://golem.md/docs/conformance.md
+- https://golem.md/sources.html
 - https://golem.md/SOURCES.md
 - https://golem.md/templates/

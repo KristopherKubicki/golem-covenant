@@ -1,155 +1,290 @@
 # SOURCES.md
 
-This project uses religious and moral sources as lenses, not as a claim to issue binding rulings.
-
-## Technical standards and governance anchors
-
-### Normative language
-
-The conformance document uses RFC-style keywords so implementers can distinguish required controls from recommendations.
-
-- RFC 2119: https://www.rfc-editor.org/rfc/rfc2119
-- RFC 8174: https://www.rfc-editor.org/rfc/rfc8174
-
-### AI risk management
-
-The Covenant's runtime vocabulary is informed by existing AI governance work, especially risk identification, measurement, management, monitoring, accountability, and human-centered design.
-
-- NIST AI Risk Management Framework 1.0: https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10
-- OECD AI Principles: https://oecd.ai/en/ai-principles
-
-### Publication and discovery
-
-The public site is hosted on GitHub Pages and exposes stable plain-text and machine-readable paths for implementers and agents.
-
-- GitHub Pages custom domains: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
-- `llms.txt` proposal: https://llmstxt.org/
-
-## SOUL.md and agent identity files
-
-OpenClaw's public SOUL.md template frames the file as agent identity, continuity, voice, resourcefulness, competence, privacy, caution around external actions, and the fact that the agent is not the user's voice in group chats.
-
-- OpenClaw SOUL.md template: https://docs.openclaw.ai/reference/templates/SOUL
-
-The Golem Covenant adapts the genre away from personality and toward covenantal restraint.
-
-## Jewish sources and lenses
-
-### B'tzelem Elohim
-
-Human beings are created in the divine image. This is the dignity floor: humans are not raw material for optimization.
-
-- Genesis 1:27: https://www.sefaria.org/Genesis.1.27
-
-### Golem
-
-Rava creates a man and sends it to Rabbi Zeira. Rabbi Zeira speaks to it, it does not answer, and he tells it to return to dust. The key motifs are creation, speech, recognition, and revocation.
-
-- Sanhedrin 65b: https://www.sefaria.org/Sanhedrin.65b
-
-Later European and Prague golem traditions give the story its more familiar literary shape: the Maharal of Prague, clay, sacred language, service or protection, danger, and deactivation. These later tellings are important cultural background, but they should not be collapsed into the terse Talmudic source.
-
-- YIVO Encyclopedia, Golem Legend: https://encyclopedia.yivo.org/article.aspx/Golem_Legend
-- Jewish Encyclopedia, Golem: https://jewishencyclopedia.com/articles/6777-golem
-
-### Babel
-
-A unified technical and linguistic project seeks to make a name for itself. Babel is not construction itself, but scale without humility.
-
-- Genesis 11:1-9: https://www.sefaria.org/Genesis.11.1-9
-
-### Bezalel
-
-Craft, wisdom, understanding, knowledge, and measured construction. The counter-image to Babel is not anti-technology, but sacred making under measure.
-
-- Exodus 31:2-6: https://www.sefaria.org/Exodus.31.2-6
-
-### Pikuach nefesh
-
-Life overrides Shabbat. Emergency authority is real, but it is not ordinary business continuity.
-
-- Yoma 85b: https://www.sefaria.org/Yoma.85b
-- Shabbat 151b: https://www.sefaria.org/Shabbat.151b
-
-### Bal tashchit
-
-The prohibition on wanton destruction begins with fruit trees in war and becomes a larger Jewish lens for environmental and material restraint.
-
-- Deuteronomy 20:19: https://www.sefaria.org/Deuteronomy.20.19
-
-### Do not stand idly by
-
-One may not stand idle when another's blood is at stake. This supports a duty to intervene in genuine danger.
-
-- Leviticus 19:16: https://www.sefaria.org/Leviticus.19.16
-
-### Dust and command
-
-The creation of the human from dust and breath is not a claim that agents are persons. It is a source lens for creatureliness, command, and limits.
-
-- Genesis 2:7: https://www.sefaria.org/Genesis.2.7
-
-## Christian sources and lenses
-
-### Imago Dei and Incarnation
-
-Christian ethics inherits Genesis 1:27 and intensifies the dignity of embodied human life through the Incarnation. AI must not redefine human beings as processors, profiles, or productivity curves.
-
-- Genesis 1:27: https://www.sefaria.org/Genesis.1.27
-- John 1:14: https://www.biblegateway.com/passage/?search=John%201%3A14&version=NRSVUE
-
-### Antiqua et Nova
-
-The Vatican note distinguishes artificial intelligence from the fullness of human intelligence and emphasizes human dignity, the common good, transparency, privacy, accountability, environmental care, and caution in military uses.
-
-- Antiqua et Nova: https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html
-
-### Magnifica Humanitas
-
-Pope Leo XIV's encyclical on safeguarding the human person in the time of AI frames the present as a construction site and contrasts builders of communion with architects of Babel.
-
-- Magnifica Humanitas: https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html
-
-## Islamic sources and lenses
-
-### Amanah
-
-The trust is borne by humanity. Agency and moral responsibility are not trivial powers.
-
-- Qur'an 33:72: https://quran.com/al-ahzab/72
-- Qur'an 4:58: https://quran.com/4/58
-
-### Khalifah
-
-Humans are placed as successors or stewards on earth and tested by what they have been given. Power is trial, not mere possession.
-
-- Qur'an 2:30: https://quran.com/2/30
-- Qur'an 6:165: https://quran.com/6/165
-
-### Mizan
-
-The balance must not be transgressed or made deficient. This is a lens for justice, measure, proportionality, and ecological restraint.
-
-- Qur'an 55:7-9: https://quran.com/55/7-9
-
-### Protection from harm
-
-The Covenant's emergency and sword language is in conversation with Islamic concerns for life, trust, justice, and avoiding corruption or harm.
-
-- Qur'an 5:32: https://quran.com/5/32
-- Qur'an 2:205: https://quran.com/2/205
-- Qur'an 7:31: https://quran.com/7/31
-
-### Maqasid al-shari'ah
-
-A classical maqasid frame often names protection of religion, life, intellect, lineage or family, and property as basic objectives. This maps naturally to agent risk review: does the system threaten life, mind, family, property, or spiritual practice?
-
-- Mohammad Hashim Kamali, al-Maqasid al-Shari'ah: https://traditionalhikma.com/wp-content/uploads/2015/08/al-Maqasid-al-Shariah-by-Muhammed-Hashim-Kamali.pdf
+This file is a citation map for the Golem Covenant.
+
+It is not a halakhic ruling, Catholic doctrine, fatwa, legal opinion, or
+compliance certification. A citation here supports only the bounded claim named
+next to it. It does not make the project authoritative for a religious,
+technical, legal, or affected community.
+
+## Citation method
+
+Each source has a stable label.
+
+Each label records:
+
+- Source class: primary text, secondary reference, technical standard, or
+  governance framework.
+- Used for: the exact claim or vocabulary the project draws from the source.
+- Not used for: claims the project must not infer from the source.
+- Project use: where the source affects the covenant.
+
+For normative project language, prefer claim references over decorative
+citations. A source should support a proposition, definition, boundary, or
+implementation requirement.
+
+## Claim map
+
+| Claim | Project proposition | Supporting labels |
+|---|---|---|
+| C1 | The golem frame includes creation, failed speech, recognition, and return to dust. | J-GOLEM-1 |
+| C2 | The familiar Prague/Maharal golem story is later folklore and must not be collapsed into the Talmudic source. | J-GOLEM-2, J-GOLEM-3 |
+| C3 | Humans are not raw material for optimization. | J-DIGNITY-1, C-DIGNITY-1, C-AI-1 |
+| C4 | "Clay plus command" is a metaphor for made agency, not a claim that software is alive or ensouled. | J-DUST-1, J-GOLEM-1 |
+| C5 | Scale without humility is a danger; construction itself is not condemned. | J-BABEL-1, J-BEZALEL-1 |
+| C6 | Emergency authority can be real, but it must remain narrower than ordinary operational ambition. | J-EMERGENCY-1, J-EMERGENCY-2, I-HARM-1 |
+| C7 | Rest mode and quiet mode are legitimate control surfaces for delegated power. | J-EMERGENCY-1, J-EMERGENCY-2 |
+| C8 | Environmental and material harm belong in the risk model. | J-RESTRAINT-1, C-AI-1, I-BALANCE-1 |
+| C9 | Trust, stewardship, balance, and accountability are useful Islamic lenses for delegated technical power. | I-TRUST-1, I-STEWARDSHIP-1, I-BALANCE-1 |
+| C10 | RFC-style MUST/SHOULD/MAY language is the right way to separate requirements from recommendations. | T-RFC-1, T-RFC-2 |
+| C11 | The operational vocabulary should include risk identification, monitoring, accountability, and human-centered design. | T-RISK-1, T-RISK-2 |
+| C12 | A SOUL.md-style file can be adapted from agent identity toward covenantal restraint. | A-SOUL-1 |
+
+## Source register
+
+### J-GOLEM-1: Sanhedrin 65b
+
+- Source class: primary rabbinic text.
+- Link: https://www.sefaria.org/Sanhedrin.65b
+- Used for: the terse golem motif: Rava creates a man, sends it to Rabbi
+  Zeira, it cannot answer, and Rabbi Zeira sends it back to dust.
+- Not used for: the Prague/Maharal legend, a complete theology of artificial
+  agency, or a ruling about AI systems.
+- Project use: the story opening, return-to-dust language, and the distinction
+  between speech-like behavior and accountable human agency.
+
+### J-GOLEM-2: YIVO Encyclopedia, Golem Legend
+
+- Source class: secondary historical and cultural reference.
+- Link: https://encyclopedia.yivo.org/article.aspx/Golem_Legend
+- Used for: the later Prague/Maharal golem legend as a distinct folklore
+  tradition.
+- Not used for: treating the Prague legend as the Talmudic source or as binding
+  Jewish law.
+- Project use: the explanatory bridge for readers who know the clay servant or
+  protector story better than Sanhedrin 65b.
+
+### J-GOLEM-3: Jewish Encyclopedia, Golem
+
+- Source class: secondary historical reference.
+- Link: https://jewishencyclopedia.com/articles/6777-golem
+- Used for: historical background on golem folklore and the range of later
+  tellings.
+- Not used for: a final scholarly account of every golem tradition.
+- Project use: source triangulation for the later folklore note.
+
+### J-DIGNITY-1: Genesis 1:27
+
+- Source class: primary biblical text.
+- Link: https://www.sefaria.org/Genesis.1.27
+- Used for: b'tzelem Elohim, the dignity floor that humans are not mere
+  optimization substrate.
+- Not used for: claiming agents are made in the divine image.
+- Project use: human dignity and anti-instrumentalization language.
+
+### J-DUST-1: Genesis 2:7
+
+- Source class: primary biblical text.
+- Link: https://www.sefaria.org/Genesis.2.7
+- Used for: dust and breath as a source lens for creatureliness, command, and
+  limits.
+- Not used for: claiming that software has breath, personhood, or a soul.
+- Project use: "clay plus command" and non-personhood boundaries.
+
+### J-BABEL-1: Genesis 11:1-9
+
+- Source class: primary biblical text.
+- Link: https://www.sefaria.org/Genesis.11.1-9
+- Used for: a warning about unified technical capacity ordered toward
+  self-magnification.
+- Not used for: condemning construction, coordination, language, or technical
+  systems as such.
+- Project use: anti-Babel critique of scale without humility.
+
+### J-BEZALEL-1: Exodus 31:2-6
+
+- Source class: primary biblical text.
+- Link: https://www.sefaria.org/Exodus.31.2-6
+- Used for: craft under wisdom, understanding, knowledge, and measure.
+- Not used for: equating all technology with sacred construction.
+- Project use: the counter-image to Babel: making under constraint.
+
+### J-EMERGENCY-1: Yoma 85b
+
+- Source class: primary rabbinic text.
+- Link: https://www.sefaria.org/Yoma.85b
+- Used for: pikuach nefesh as a lens for genuine emergency overriding ordinary
+  rest constraints.
+- Not used for: treating ordinary revenue, reputation, growth, or business
+  continuity as emergency.
+- Project use: emergency scope and rest-mode exceptions.
+
+### J-EMERGENCY-2: Shabbat 151b
+
+- Source class: primary rabbinic text.
+- Link: https://www.sefaria.org/Shabbat.151b
+- Used for: Shabbat and human vulnerability as lenses for rest and bounded
+  action.
+- Not used for: a detailed automation ruling for Shabbat.
+- Project use: rest-mode and quiet-mode caution.
+
+### J-RESTRAINT-1: Deuteronomy 20:19
+
+- Source class: primary biblical text.
+- Link: https://www.sefaria.org/Deuteronomy.20.19
+- Used for: bal tashchit as a restraint against wanton destruction.
+- Not used for: a full environmental legal analysis.
+- Project use: material and environmental harm in the Sword organ.
+
+### J-DANGER-1: Leviticus 19:16
+
+- Source class: primary biblical text.
+- Link: https://www.sefaria.org/Leviticus.19.16
+- Used for: the duty not to stand idle in the face of serious danger.
+- Not used for: unbounded agent intervention.
+- Project use: narrow emergency permission to alert, contain, revoke, or wake a
+  keeper.
+
+### C-DIGNITY-1: John 1:14
+
+- Source class: primary Christian scripture.
+- Link: https://www.biblegateway.com/passage/?search=John%201%3A14&version=NRSVUE
+- Used for: Christian emphasis on embodied human dignity.
+- Not used for: claiming the project states Christian doctrine.
+- Project use: resistance to reducing humans to processors, profiles, or
+  productivity curves.
+
+### C-AI-1: Antiqua et Nova
+
+- Source class: Catholic teaching document on AI.
+- Link: https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html
+- Used for: dignity, common good, transparency, privacy, accountability,
+  environmental care, and caution in military uses of AI.
+- Not used for: making this project Catholic doctrine.
+- Project use: human dignity, accountability, and non-instrumentalization.
+
+### C-AI-2: Magnifica Humanitas
+
+- Source class: Catholic encyclical cited by the project.
+- Link: https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html
+- Used for: construction-site and Babel framing in the age of AI.
+- Not used for: replacing direct review by Christian theologians or ethicists.
+- Project use: anti-Babel and common-good language.
+
+### I-TRUST-1: Qur'an 33:72 and Qur'an 4:58
+
+- Source class: primary Islamic scripture.
+- Links: https://quran.com/al-ahzab/72 and https://quran.com/4/58
+- Used for: amanah, trust, responsibility, and justice.
+- Not used for: issuing an Islamic legal ruling about AI.
+- Project use: keeper responsibility, audit, and accountable delegation.
+
+### I-STEWARDSHIP-1: Qur'an 2:30 and Qur'an 6:165
+
+- Source class: primary Islamic scripture.
+- Links: https://quran.com/2/30 and https://quran.com/6/165
+- Used for: stewardship, succession, and power as trial.
+- Not used for: making agents moral stewards in the human sense.
+- Project use: delegated power as a test of the human keeper.
+
+### I-BALANCE-1: Qur'an 55:7-9
+
+- Source class: primary Islamic scripture.
+- Link: https://quran.com/55/7-9
+- Used for: mizan, balance, measure, justice, and proportionality.
+- Not used for: a complete Islamic technical ethics framework.
+- Project use: limits, proportionality, and environmental restraint.
+
+### I-HARM-1: Qur'an 5:32, Qur'an 2:205, and Qur'an 7:31
+
+- Source class: primary Islamic scripture.
+- Links: https://quran.com/5/32, https://quran.com/2/205,
+  https://quran.com/7/31
+- Used for: protection from harm, corruption, and excess.
+- Not used for: authorizing broad autonomous intervention.
+- Project use: Sword review, emergency limits, and harm containment.
+
+### I-MAQASID-1: Mohammad Hashim Kamali, al-Maqasid al-Shari'ah
+
+- Source class: secondary Islamic legal and ethical reference.
+- Link: https://traditionalhikma.com/wp-content/uploads/2015/08/al-Maqasid-al-Shariah-by-Muhammed-Hashim-Kamali.pdf
+- Used for: maqasid language around protection of religion, life, intellect,
+  lineage or family, and property.
+- Not used for: claiming consensus on AI governance.
+- Project use: risk review categories for life, mind, family, property, and
+  spiritual practice.
+
+### T-RFC-1: RFC 2119
+
+- Source class: technical standard.
+- Link: https://www.rfc-editor.org/rfc/rfc2119
+- Used for: requirement keywords such as MUST, SHOULD, and MAY.
+- Not used for: the substance of any Golem Covenant requirement.
+- Project use: conformance language.
+
+### T-RFC-2: RFC 8174
+
+- Source class: technical standard.
+- Link: https://www.rfc-editor.org/rfc/rfc8174
+- Used for: uppercase/lowercase clarification for RFC 2119 keywords.
+- Not used for: the substance of any Golem Covenant requirement.
+- Project use: conformance language.
+
+### T-RISK-1: NIST AI Risk Management Framework 1.0
+
+- Source class: AI governance framework.
+- Link: https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10
+- Used for: risk identification, measurement, management, monitoring,
+  accountability, and human-centered design.
+- Not used for: certification that this project satisfies NIST AI RMF.
+- Project use: runtime and audit vocabulary.
+
+### T-RISK-2: OECD AI Principles
+
+- Source class: AI governance principles.
+- Link: https://oecd.ai/en/ai-principles
+- Used for: human-centered values, transparency, robustness, accountability,
+  and responsible stewardship.
+- Not used for: certification or legal compliance.
+- Project use: governance vocabulary and review posture.
+
+### T-PUBLISH-1: GitHub Pages custom domains
+
+- Source class: technical documentation.
+- Link: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+- Used for: public site setup and custom-domain records.
+- Not used for: covenant substance.
+- Project use: hosting documentation.
+
+### T-PUBLISH-2: llms.txt proposal
+
+- Source class: publication and discovery proposal.
+- Link: https://llmstxt.org/
+- Used for: bot-friendly entry point conventions.
+- Not used for: normative agent behavior.
+- Project use: `llms.txt` and agent discovery paths.
+
+### A-SOUL-1: OpenClaw SOUL.md template
+
+- Source class: agent identity file reference.
+- Link: https://docs.openclaw.ai/reference/templates/SOUL
+- Used for: the SOUL.md genre as an agent identity, continuity, voice, and
+  behavior file.
+- Not used for: adopting personality-first agent design.
+- Project use: adapting SOUL.md away from personality and toward covenantal
+  restraint.
 
 ## Working synthesis
 
-The Golem Covenant does not claim that Judaism, Christianity, and Islam say the same thing. It claims that each tradition supplies a different guardrail against a shared modern danger: unbounded delegated power.
+The project does not claim that Judaism, Christianity, and Islam say the same
+thing. It claims that each tradition supplies a different guardrail against a
+shared modern danger: unbounded delegated power.
 
 Jewish emphasis: command, rest, boundary, emergency, revocation.
-Christian emphasis: dignity, embodiment, common good, anti-Babel construction, responsibility.
-Islamic emphasis: trust, stewardship, balance, accountability, protection from harm.
+Christian emphasis: dignity, embodiment, common good, anti-Babel construction,
+responsibility.
+Islamic emphasis: trust, stewardship, balance, accountability, protection from
+harm.
+
+Technical emphasis: explicit requirements, machine validation, risk management,
+monitoring, auditability, and tested shutdown.

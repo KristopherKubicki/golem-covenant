@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Citation Map - The Golem Covenant</title>
+  <meta name="description" content="A claim-bounded citation map for the Golem Covenant.">
+  <link rel="canonical" href="https://golem.md/sources.html">
+  <link rel="alternate" type="text/markdown" href="https://golem.md/SOURCES.md" title="Raw SOURCES.md">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f8fa;
+      --ink: #11161d;
+      --muted: #53606d;
+      --soft: #eef2f5;
+      --line: #d6dde4;
+      --panel: #ffffff;
+      --accent: #8f1f3d;
+      --teal: #1d6f74;
+      --gold: #9a6a1b;
+      --code: #f1f4f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101317;
+        --ink: #eef3f8;
+        --muted: #abb6c2;
+        --soft: #171d23;
+        --line: #2b3540;
+        --panel: #151a20;
+        --accent: #f07a96;
+        --teal: #6bc2c8;
+        --gold: #d7b16a;
+        --code: #1d242c;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font: 17px/1.62 ui-serif, Georgia, Cambria, "Times New Roman", serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    code {
+      background: var(--code);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 0.1em 0.28em;
+      font: 0.9em/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+      font: 700 13px/1.2 ui-sans-serif, system-ui, sans-serif;
+    }
+    .topbar-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 26px;
+      height: 26px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      color: var(--accent);
+      font-size: 14px;
+    }
+    .toplinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+    .toplinks a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .wrap {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 46px 0 78px;
+    }
+    .eyebrow {
+      color: var(--accent);
+      font: 800 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 14px;
+    }
+    h1 {
+      font-size: 52px;
+      line-height: 1;
+      letter-spacing: 0;
+      margin: 0 0 18px;
+    }
+    h2 {
+      font-size: 30px;
+      line-height: 1.15;
+      margin: 0 0 14px;
+    }
+    h3 {
+      font: 800 15px/1.2 ui-sans-serif, system-ui, sans-serif;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+    p { margin: 0 0 16px; }
+    .lede {
+      color: var(--muted);
+      font-size: 21px;
+      line-height: 1.45;
+      max-width: 780px;
+      margin: 0 0 24px;
+    }
+    .notice {
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 16px 18px;
+      margin: 24px 0 34px;
+      color: var(--muted);
+    }
+    section {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 15px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--soft);
+      font: 800 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+      text-transform: uppercase;
+    }
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .source {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 14px 15px;
+    }
+    .source strong {
+      display: block;
+      color: var(--accent);
+      font: 800 14px/1.2 ui-sans-serif, system-ui, sans-serif;
+      margin-bottom: 8px;
+    }
+    .source p {
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    .source p:last-child { margin-bottom: 0; }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 8px 12px;
+      text-decoration: none;
+      font: 800 14px/1.2 ui-sans-serif, system-ui, sans-serif;
+    }
+    .button.primary {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    @media (max-width: 760px) {
+      .topbar-inner { flex-direction: column; align-items: flex-start; padding: 14px 0; }
+      .toplinks { justify-content: flex-start; }
+      h1 { font-size: 38px; }
+      .lede { font-size: 18px; }
+      .source-grid { grid-template-columns: 1fr; }
+      table { display: block; overflow-x: auto; }
+      .button { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span>golem.md</span>
+      </a>
+      <nav class="toplinks" aria-label="Primary">
+        <a href="./spec.html">Spec</a>
+        <a href="./schema/golem.schema.json">Schema</a>
+        <a href="./sources.html">Sources</a>
+        <a href="https://github.com/KristopherKubicki/golem-covenant/discussions">Discuss</a>
+        <a href="https://github.com/KristopherKubicki/golem-covenant">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="eyebrow">Citation map</p>
+    <h1>Sources as claim boundaries</h1>
+    <p class="lede">A source in the Golem Covenant supports a named proposition, definition, or implementation boundary. It does not become decorative authority.</p>
+
+    <div class="notice">
+      The raw source register is <a href="./SOURCES.md"><code>/SOURCES.md</code></a>.
+      This page gives stable labels and readable anchors for humans.
+    </div>
+
+    <section id="method">
+      <h2>Method</h2>
+      <p>Each source has a label, a source class, an exact use, and a limit. This keeps the standard closer to a mathematical proof: cite the proposition you are using, and do not infer more than the citation supports.</p>
+      <table>
+        <thead><tr><th>Part</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Claim</td><td>The project proposition being supported.</td></tr>
+          <tr><td>Label</td><td>The stable citation id used in the spec and site.</td></tr>
+          <tr><td>Used for</td><td>The bounded claim the source is allowed to support.</td></tr>
+          <tr><td>Not used for</td><td>The inference the project explicitly refuses to make.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="claims">
+      <h2>Claim map</h2>
+      <table>
+        <thead><tr><th>Claim</th><th>Project proposition</th><th>Sources</th></tr></thead>
+        <tbody>
+          <tr><td>C1</td><td>Golem includes creation, failed speech, recognition, and return to dust.</td><td><a href="#j-golem-1">J-GOLEM-1</a></td></tr>
+          <tr><td>C2</td><td>The familiar Prague/Maharal story is later folklore, not the Talmudic source.</td><td><a href="#j-golem-2">J-GOLEM-2</a>, <a href="#j-golem-3">J-GOLEM-3</a></td></tr>
+          <tr><td>C3</td><td>Humans are not raw material for optimization.</td><td><a href="#j-dignity-1">J-DIGNITY-1</a>, <a href="#c-dignity-1">C-DIGNITY-1</a>, <a href="#c-ai-1">C-AI-1</a></td></tr>
+          <tr><td>C4</td><td>Clay plus command is a metaphor for made agency, not software personhood.</td><td><a href="#j-dust-1">J-DUST-1</a>, <a href="#j-golem-1">J-GOLEM-1</a></td></tr>
+          <tr><td>C5</td><td>Scale without humility is dangerous; construction itself is not condemned.</td><td><a href="#j-babel-1">J-BABEL-1</a>, <a href="#j-bezalel-1">J-BEZALEL-1</a></td></tr>
+          <tr><td>C6</td><td>Emergency authority must stay narrower than ordinary ambition.</td><td><a href="#j-emergency-1">J-EMERGENCY-1</a>, <a href="#i-harm-1">I-HARM-1</a></td></tr>
+          <tr><td>C7</td><td>Trust, stewardship, balance, and accountability are useful Islamic lenses.</td><td><a href="#i-trust-1">I-TRUST-1</a>, <a href="#i-stewardship-1">I-STEWARDSHIP-1</a>, <a href="#i-balance-1">I-BALANCE-1</a></td></tr>
+          <tr><td>C8</td><td>MUST/SHOULD/MAY separates requirements from recommendations.</td><td><a href="#t-rfc-1">T-RFC-1</a>, <a href="#t-rfc-2">T-RFC-2</a></td></tr>
+          <tr><td>C9</td><td>Runtime vocabulary should include risk, monitoring, accountability, and human-centered design.</td><td><a href="#t-risk-1">T-RISK-1</a>, <a href="#t-risk-2">T-RISK-2</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="register">
+      <h2>Source register</h2>
+      <div class="source-grid">
+        <article class="source" id="j-golem-1"><strong>J-GOLEM-1</strong><p><a href="https://www.sefaria.org/Sanhedrin.65b">Sanhedrin 65b</a>. Used for the terse golem motif: creation, failed speech, recognition, return to dust.</p><p>Not used for the Prague legend or an AI ruling.</p></article>
+        <article class="source" id="j-golem-2"><strong>J-GOLEM-2</strong><p><a href="https://encyclopedia.yivo.org/article.aspx/Golem_Legend">YIVO Encyclopedia, Golem Legend</a>. Used for the later Prague/Maharal folklore tradition.</p><p>Not used as the Talmudic source.</p></article>
+        <article class="source" id="j-golem-3"><strong>J-GOLEM-3</strong><p><a href="https://jewishencyclopedia.com/articles/6777-golem">Jewish Encyclopedia, Golem</a>. Used for historical folklore triangulation.</p><p>Not used as a final account of every golem tradition.</p></article>
+        <article class="source" id="j-dignity-1"><strong>J-DIGNITY-1</strong><p><a href="https://www.sefaria.org/Genesis.1.27">Genesis 1:27</a>. Used for human dignity and anti-instrumentalization.</p><p>Not used to claim agents are made in the divine image.</p></article>
+        <article class="source" id="j-dust-1"><strong>J-DUST-1</strong><p><a href="https://www.sefaria.org/Genesis.2.7">Genesis 2:7</a>. Used for dust, breath, creatureliness, command, and limits.</p><p>Not used to claim software has breath or a soul.</p></article>
+        <article class="source" id="j-babel-1"><strong>J-BABEL-1</strong><p><a href="https://www.sefaria.org/Genesis.11.1-9">Genesis 11:1-9</a>. Used for scale without humility.</p><p>Not used to condemn construction or technical coordination.</p></article>
+        <article class="source" id="j-bezalel-1"><strong>J-BEZALEL-1</strong><p><a href="https://www.sefaria.org/Exodus.31.2-6">Exodus 31:2-6</a>. Used for craft under wisdom, understanding, knowledge, and measure.</p><p>Not used to call all technology sacred.</p></article>
+        <article class="source" id="j-emergency-1"><strong>J-EMERGENCY-1</strong><p><a href="https://www.sefaria.org/Yoma.85b">Yoma 85b</a>. Used for genuine emergency overriding ordinary rest constraints.</p><p>Not used for revenue, reputation, growth, or business continuity.</p></article>
+        <article class="source" id="c-dignity-1"><strong>C-DIGNITY-1</strong><p><a href="https://www.biblegateway.com/passage/?search=John%201%3A14&amp;version=NRSVUE">John 1:14</a>. Used for Christian emphasis on embodied human dignity.</p><p>Not used to claim this project states Christian doctrine.</p></article>
+        <article class="source" id="c-ai-1"><strong>C-AI-1</strong><p><a href="https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html">Antiqua et Nova</a>. Used for dignity, common good, privacy, accountability, and AI caution.</p><p>Not used as project certification.</p></article>
+        <article class="source" id="c-ai-2"><strong>C-AI-2</strong><p><a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html">Magnifica Humanitas</a>. Used for AI, construction, Babel, and common-good framing.</p><p>Not used in place of Christian review.</p></article>
+        <article class="source" id="i-trust-1"><strong>I-TRUST-1</strong><p><a href="https://quran.com/al-ahzab/72">Qur'an 33:72</a> and <a href="https://quran.com/4/58">Qur'an 4:58</a>. Used for trust, responsibility, and justice.</p><p>Not used as an Islamic legal ruling.</p></article>
+        <article class="source" id="i-stewardship-1"><strong>I-STEWARDSHIP-1</strong><p><a href="https://quran.com/2/30">Qur'an 2:30</a> and <a href="https://quran.com/6/165">Qur'an 6:165</a>. Used for stewardship and power as trial.</p><p>Not used to make agents moral stewards.</p></article>
+        <article class="source" id="i-balance-1"><strong>I-BALANCE-1</strong><p><a href="https://quran.com/55/7-9">Qur'an 55:7-9</a>. Used for balance, measure, justice, and proportionality.</p><p>Not used as a full Islamic technical ethics framework.</p></article>
+        <article class="source" id="i-harm-1"><strong>I-HARM-1</strong><p><a href="https://quran.com/5/32">Qur'an 5:32</a>, <a href="https://quran.com/2/205">Qur'an 2:205</a>, and <a href="https://quran.com/7/31">Qur'an 7:31</a>. Used for protection from harm, corruption, and excess.</p><p>Not used to authorize broad autonomous intervention.</p></article>
+        <article class="source" id="t-rfc-1"><strong>T-RFC-1</strong><p><a href="https://www.rfc-editor.org/rfc/rfc2119">RFC 2119</a>. Used for MUST, SHOULD, and MAY.</p><p>Not used for the substance of covenant requirements.</p></article>
+        <article class="source" id="t-rfc-2"><strong>T-RFC-2</strong><p><a href="https://www.rfc-editor.org/rfc/rfc8174">RFC 8174</a>. Used for uppercase/lowercase clarification.</p><p>Not used for the substance of covenant requirements.</p></article>
+        <article class="source" id="t-risk-1"><strong>T-RISK-1</strong><p><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a>. Used for risk, monitoring, accountability, and human-centered design vocabulary.</p><p>Not used as certification.</p></article>
+        <article class="source" id="t-risk-2"><strong>T-RISK-2</strong><p><a href="https://oecd.ai/en/ai-principles">OECD AI Principles</a>. Used for responsible AI governance vocabulary.</p><p>Not used as certification or legal compliance.</p></article>
+        <article class="source" id="a-soul-1"><strong>A-SOUL-1</strong><p><a href="https://docs.openclaw.ai/reference/templates/SOUL">OpenClaw SOUL.md template</a>. Used for the SOUL.md file genre.</p><p>Not used to adopt personality-first agent design.</p></article>
+      </div>
+      <nav class="links" aria-label="Source files">
+        <a class="button primary" href="./SOURCES.md">Raw SOURCES.md</a>
+        <a class="button" href="./spec.html">Readable Spec</a>
+        <a class="button" href="./golem.md">Raw golem.md</a>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

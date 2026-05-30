@@ -169,24 +169,22 @@ This framework uses religious and moral sources as lenses. It is not a
 halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compliance
 certification.
 
-## Source anchors
+## Citation map
 
 This covenant is in conversation with sources about delegated power, speech,
-rest, dignity, trust, balance, harm, and revocation. These links are anchors for
-review, not claims of completed religious synthesis.
+rest, dignity, trust, balance, harm, and revocation. Citations are labels for
+bounded claims, not claims of completed religious synthesis.
 
-- Golem and return to dust: [Sanhedrin 65b](https://www.sefaria.org/Sanhedrin.65b)
-- Later Prague golem legend: [YIVO Encyclopedia](https://encyclopedia.yivo.org/article.aspx/Golem_Legend)
-- Historical folklore summary: [Jewish Encyclopedia](https://jewishencyclopedia.com/articles/6777-golem)
-- Human dignity: [Genesis 1:27](https://www.sefaria.org/Genesis.1.27)
-- Dust and breath: [Genesis 2:7](https://www.sefaria.org/Genesis.2.7)
-- Babel and scale without humility: [Genesis 11:1-9](https://www.sefaria.org/Genesis.11.1-9)
-- Emergency and life: [Yoma 85b](https://www.sefaria.org/Yoma.85b)
-- Catholic AI ethics: [Antiqua et Nova](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html)
-- AI, Babel, and common good: [Magnifica Humanitas](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html)
-- Trust and justice: [Qur'an 4:58](https://quran.com/4/58)
-- Balance and measure: [Qur'an 55:7-9](https://quran.com/55/7-9)
-- Normative language: [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119) and [RFC 8174](https://www.rfc-editor.org/rfc/rfc8174)
-- AI risk management: [NIST AI RMF 1.0](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10)
+- [J-GOLEM-1](SOURCES.md#j-golem-1-sanhedrin-65b): golem, speech, return to dust
+- [J-GOLEM-2](SOURCES.md#j-golem-2-yivo-encyclopedia-golem-legend): later Prague golem legend
+- [J-DIGNITY-1](SOURCES.md#j-dignity-1-genesis-127): human dignity
+- [J-DUST-1](SOURCES.md#j-dust-1-genesis-27): dust and breath
+- [J-BABEL-1](SOURCES.md#j-babel-1-genesis-111-9): Babel and scale without humility
+- [J-EMERGENCY-1](SOURCES.md#j-emergency-1-yoma-85b): emergency and life
+- [C-AI-1](SOURCES.md#c-ai-1-antiqua-et-nova): Catholic AI ethics
+- [I-TRUST-1](SOURCES.md#i-trust-1-quran-3372-and-quran-458): trust and justice
+- [I-BALANCE-1](SOURCES.md#i-balance-1-quran-557-9): balance and measure
+- [T-RFC-1](SOURCES.md#t-rfc-1-rfc-2119) and [T-RFC-2](SOURCES.md#t-rfc-2-rfc-8174): normative language
+- [T-RISK-1](SOURCES.md#t-risk-1-nist-ai-risk-management-framework-10): AI risk management
 
-See `SOURCES.md` for the fuller source map.
+See `SOURCES.md` for source classes, exact supported claims, and limits.

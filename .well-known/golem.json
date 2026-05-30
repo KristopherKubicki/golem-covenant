@@ -12,6 +12,7 @@
     "conformance": "https://golem.md/docs/conformance.md",
     "soul": "https://golem.md/soul.md",
     "sources": "https://golem.md/SOURCES.md",
+    "readable_sources": "https://golem.md/sources.html",
     "templates": "https://golem.md/templates/",
     "llms": "https://golem.md/llms.txt",
     "llms_full": "https://golem.md/llms-full.txt"
