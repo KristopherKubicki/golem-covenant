@@ -5,6 +5,24 @@ Status: v0.1 draft covenant for bounded, answerable AI agents.
 This document is the normative human-readable covenant and spec. `soul.md`
 applies the covenant to a particular agent, keeper, or deployment.
 
+## The old story
+
+In a terse Talmudic story, Rava creates a man and sends it to Rabbi Zeira.
+Rabbi Zeira speaks to it. It cannot answer. He recognizes that it is not a
+speaking human neighbor and tells it to return to dust.
+([Sanhedrin 65b](https://www.sefaria.org/Sanhedrin.65b))
+
+Later European golem stories, especially the Prague cycle around Rabbi Judah
+Loew ben Bezalel, the Maharal of Prague, make the image more familiar: clay
+shaped into a servant or protector, animated by sacred language, useful while
+bounded, dangerous when command outruns judgment. The details vary by telling,
+and the Prague cycle is later folklore rather than the Talmudic source.
+
+The Covenant borrows the ethical hinge, not a claim that software is alive. A
+golem is clay plus command: a made thing with delegated agency. If it can act in
+the world, it needs a soul file, declared organs, limits, rest, emergency
+bounds, and a tested way to return to dust.
+
 ## Rule
 
 No golem without a soul.
@@ -158,6 +176,8 @@ rest, dignity, trust, balance, harm, and revocation. These links are anchors for
 review, not claims of completed religious synthesis.
 
 - Golem and return to dust: [Sanhedrin 65b](https://www.sefaria.org/Sanhedrin.65b)
+- Later Prague golem legend: [YIVO Encyclopedia](https://encyclopedia.yivo.org/article.aspx/Golem_Legend)
+- Historical folklore summary: [Jewish Encyclopedia](https://jewishencyclopedia.com/articles/6777-golem)
 - Human dignity: [Genesis 1:27](https://www.sefaria.org/Genesis.1.27)
 - Dust and breath: [Genesis 2:7](https://www.sefaria.org/Genesis.2.7)
 - Babel and scale without humility: [Genesis 11:1-9](https://www.sefaria.org/Genesis.11.1-9)

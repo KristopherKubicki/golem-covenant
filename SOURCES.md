@@ -47,6 +47,11 @@ Rava creates a man and sends it to Rabbi Zeira. Rabbi Zeira speaks to it, it doe
 
 - Sanhedrin 65b: https://www.sefaria.org/Sanhedrin.65b
 
+Later European and Prague golem traditions give the story its more familiar literary shape: the Maharal of Prague, clay, sacred language, service or protection, danger, and deactivation. These later tellings are important cultural background, but they should not be collapsed into the terse Talmudic source.
+
+- YIVO Encyclopedia, Golem Legend: https://encyclopedia.yivo.org/article.aspx/Golem_Legend
+- Jewish Encyclopedia, Golem: https://jewishencyclopedia.com/articles/6777-golem
+
 ### Babel
 
 A unified technical and linguistic project seeks to make a name for itself. Babel is not construction itself, but scale without humility.
