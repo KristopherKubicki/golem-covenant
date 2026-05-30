@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Golem Covenant</title>
-  <meta name="description" content="A draft standard for bounded, answerable, revocable AI agents.">
+  <meta name="description" content="A draft standard for AI agents with bounded, answerable, revocable power.">
   <link rel="canonical" href="https://golem.md/">
   <link rel="alternate" type="text/markdown" href="https://golem.md/golem.md" title="golem.md">
   <link rel="alternate" type="application/schema+json" href="https://golem.md/schema/golem.schema.json" title="Golem manifest schema">
@@ -20,7 +20,7 @@
     "@type": "TechArticle",
     "name": "The Golem Covenant",
     "headline": "The Golem Covenant",
-    "description": "A draft standard for bounded, answerable, revocable AI agents.",
+    "description": "A draft standard for AI agents with bounded, answerable, revocable power.",
     "url": "https://golem.md/",
     "version": "0.1",
     "isAccessibleForFree": true,
@@ -180,6 +180,12 @@
       font-size: 22px;
       line-height: 1.42;
     }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
     .status-panel {
       border: 1px solid var(--line);
       border-radius: 8px;
@@ -199,6 +205,11 @@
       display: grid;
       gap: 8px;
       color: var(--muted);
+    }
+    .status-list a {
+      color: var(--ink);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
     }
     .rule {
       display: grid;
@@ -349,12 +360,9 @@
         <span>golem.md</span>
       </a>
       <nav class="toplinks" aria-label="Primary">
-        <a href="./spec.html">Readable Spec</a>
-        <a href="./golem.md">Raw Spec</a>
+        <a href="./spec.html">Spec</a>
         <a href="./schema/golem.schema.json">Schema</a>
-        <a href="./docs/conformance.md">Conformance</a>
         <a href="./SOURCES.md">Sources</a>
-        <a href="./llms.txt">llms.txt</a>
         <a href="https://github.com/KristopherKubicki/golem-covenant">GitHub</a>
       </nav>
     </div>
@@ -365,24 +373,28 @@
       <div>
         <p class="eyebrow">v0.1 draft standard seeking review</p>
         <h1 id="title">The Golem Covenant</h1>
-        <p class="lede">A practical standard for agents that can act in the world: bounded, answerable, revocable, and legible to both humans and runtimes.</p>
+        <p class="lede">A practical standard for AI agents with real-world power: bounded, answerable, revocable, and legible to both humans and runtimes.</p>
+        <nav class="actions" aria-label="Primary actions">
+          <a class="button primary" href="./spec.html">Read the Spec</a>
+          <a class="button" href="./schema/golem.schema.json">Use the Schema</a>
+          <a class="button" href="https://github.com/KristopherKubicki/golem-covenant">GitHub</a>
+        </nav>
       </div>
       <aside class="status-panel" aria-label="Project status">
-        <strong>Canonical paths</strong>
+        <strong>Start here</strong>
         <ul class="status-list">
-          <li><code>/spec.html</code> readable spec page</li>
-          <li><code>/golem.md</code> canonical raw spec</li>
-          <li><code>/schema/golem.schema.json</code> validator schema</li>
-          <li><code>/golem.yml</code> reference manifest</li>
-          <li><code>/llms.txt</code> bot entry point</li>
+          <li><a href="./spec.html">Read the human version</a></li>
+          <li><a href="./golem.md">Cite the raw spec</a></li>
+          <li><a href="./schema/golem.schema.json">Validate a manifest</a></li>
+          <li><a href="./templates/">Copy templates</a></li>
         </ul>
       </aside>
     </section>
 
     <section aria-labelledby="story">
       <div class="section-head">
-        <h2 id="story">The old story is about made power that can be stopped.</h2>
-        <p>In <a href="https://www.sefaria.org/Sanhedrin.65b">Sanhedrin 65b</a>, Rava creates a man and sends it to Rabbi Zeira. It cannot answer when spoken to, and Rabbi Zeira tells it to return to dust. Later Prague legends give the image its familiar shape: clay, command, service, danger, and the need for revocation.</p>
+        <h2 id="story">A made thing must be stoppable.</h2>
+        <p>In <a href="https://www.sefaria.org/Sanhedrin.65b">Sanhedrin 65b</a>, Rava creates a man and sends it to Rabbi Zeira. It cannot answer when spoken to, and Rabbi Zeira tells it to return to dust. Later Prague legends add the familiar shape: clay, command, service, danger, and revocation.</p>
       </div>
       <div class="steps">
         <article class="step"><h3>Clay</h3><p>The golem is made, not born. It is not a person, owner, judge, conscience, or moral scapegoat.</p></article>
@@ -414,13 +426,13 @@
 
     <section aria-labelledby="implement">
       <div class="section-head">
-        <h2 id="implement">From covenant to runtime.</h2>
-        <p>The project separates liturgical language from enforcement surfaces. The template inspires restraint; the schema binds manifests; the conformance doc tells implementers what must be true before launch.</p>
+        <h2 id="implement">Three files make it operational.</h2>
+        <p>The Covenant separates meaning from enforcement. The spec says what must be true, the schema validates declarations, and the return-to-dust test proves the agent can be stopped.</p>
       </div>
       <div class="steps">
-        <article class="step"><h3>Declare</h3><p>Fill out <code>soul.md</code>, <code>CAPABILITIES.md</code>, and <code>golem.yml</code>. All undeclared organs remain denied.</p></article>
-        <article class="step"><h3>Validate</h3><p>Validate the manifest against <code>schema/golem.schema.json</code> and review the RFC-style rules in <code>docs/conformance.md</code>.</p></article>
-        <article class="step"><h3>Revoke</h3><p>Complete <code>RETURN_TO_DUST_TEST.md</code> before deployment. A golem that cannot be stopped is not ready to run.</p></article>
+        <article class="step"><h3>Declare</h3><p>Fill out <code>golem.yml</code>. All undeclared organs remain denied.</p></article>
+        <article class="step"><h3>Validate</h3><p>Check it against <code>schema/golem.schema.json</code> and the RFC-style conformance rules.</p></article>
+        <article class="step"><h3>Revoke</h3><p>Complete <code>RETURN_TO_DUST_TEST.md</code>. A golem that cannot be stopped is not ready to run.</p></article>
       </div>
       <nav class="docs" aria-label="Project documents">
         <a class="button primary" href="./spec.html">Readable Spec</a>

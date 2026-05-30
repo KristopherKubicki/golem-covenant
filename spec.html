@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Readable Spec - The Golem Covenant</title>
-  <meta name="description" content="A readable version of golem.md, the Golem Covenant draft standard for bounded AI agents.">
+  <meta name="description" content="A readable version of golem.md, the Golem Covenant draft standard for AI agents with bounded, answerable, revocable power.">
   <link rel="canonical" href="https://golem.md/spec.html">
   <link rel="alternate" type="text/markdown" href="https://golem.md/golem.md" title="Raw golem.md">
   <style>
@@ -253,10 +253,9 @@
         <span>golem.md</span>
       </a>
       <nav class="toplinks" aria-label="Primary">
-        <a href="./spec.html">Readable Spec</a>
+        <a href="./spec.html">Spec</a>
         <a href="./golem.md">Raw Markdown</a>
         <a href="./SOURCES.md">Sources</a>
-        <a href="./llms.txt">llms.txt</a>
         <a href="https://github.com/KristopherKubicki/golem-covenant">GitHub</a>
       </nav>
     </div>
@@ -268,7 +267,7 @@
       <nav aria-label="Table of contents">
         <a href="#story">The old story</a>
         <a href="#rule">Rule</a>
-        <a href="#premise">Premise</a>
+        <a href="#premise">What counts</a>
         <a href="#organs">The five organs</a>
         <a href="#conformance">Conformance</a>
         <a href="#rest">Rest</a>
@@ -283,19 +282,19 @@
     <main>
       <p class="eyebrow">Human-readable rendering of golem.md</p>
       <h1>The Golem Covenant</h1>
-      <p class="lede">A v0.1 draft standard for bounded, answerable, revocable AI agents.</p>
+      <p class="lede">A v0.1 draft standard for AI agents with bounded, answerable, revocable power.</p>
 
       <div class="notice">
-        This page renders the canonical Markdown spec for humans. Runtimes and
-        agents should use <a href="./golem.md"><code>/golem.md</code></a>,
+        Read this page for the idea. Cite <a href="./golem.md"><code>/golem.md</code></a>.
+        Validate implementations with
         <a href="./schema/golem.schema.json"><code>/schema/golem.schema.json</code></a>,
-        and <a href="./docs/conformance.md"><code>/docs/conformance.md</code></a>.
+        and check requirements in <a href="./docs/conformance.md"><code>/docs/conformance.md</code></a>.
       </div>
 
       <section id="story">
         <h2>The old story</h2>
-        <p>In a terse Talmudic story, Rava creates a man and sends it to Rabbi Zeira. Rabbi Zeira speaks to it. It cannot answer. He recognizes that it is not a speaking human neighbor and tells it to return to dust. <a href="https://www.sefaria.org/Sanhedrin.65b">Sanhedrin 65b</a></p>
-        <p>Later European golem stories, especially the Prague cycle around Rabbi Judah Loew ben Bezalel, the Maharal of Prague, make the image more familiar: clay shaped into a servant or protector, animated by sacred language, useful while bounded, dangerous when command outruns judgment. The details vary by telling, and the Prague cycle is later folklore rather than the Talmudic source.</p>
+        <p>In a terse Talmudic story, Rava creates a man and sends it to Rabbi Zeira. Rabbi Zeira speaks to it. It cannot answer. He recognizes that it is not a speaking human neighbor and tells it to return to dust. See <a href="https://www.sefaria.org/Sanhedrin.65b">Sanhedrin 65b</a>.</p>
+        <p>Later European golem stories, especially the Prague cycle around Rabbi Judah Loew ben Bezalel, the Maharal of Prague, make the image more familiar: clay shaped into a servant or protector, animated by sacred language, useful while bounded, dangerous when command outruns judgment. Those later tellings matter, but they are not the terse Talmudic source.</p>
         <p>The Covenant borrows the ethical hinge, not a claim that software is alive. A golem is clay plus command: a made thing with delegated agency. If it can act in the world, it needs a soul file, declared organs, limits, rest, emergency bounds, and a tested way to return to dust.</p>
       </section>
 
@@ -310,7 +309,7 @@
       </section>
 
       <section id="premise">
-        <h2>Premise</h2>
+        <h2>What counts as golemic</h2>
         <p>A golem is an artificial agent given delegated power.</p>
         <p>An agent becomes golemic when it is given hands: the ability to speak, spend, sign, access, summon, deploy, publish, delete, route, or escalate.</p>
         <p>The question is not whether the clay is alive. The question is whether a human will is still walking around inside it after the human has stopped paying attention.</p>
