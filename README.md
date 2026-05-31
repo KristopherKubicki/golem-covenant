@@ -46,7 +46,7 @@ See `CONTRIBUTING.md` for ground rules.
 | `golem.yml` | reference manifest and example implementation |
 | `soul.md` | covenantal template |
 | `templates/*` | implementation aids |
-| `SOURCES.md` | citation map with claim boundaries |
+| `SOURCES.md` | conventional bibliography and citation map with claim boundaries |
 | `docs/*` | commentary and guidance unless marked normative |
 
 ## GitHub Pages
@@ -116,7 +116,7 @@ templates/INCIDENT.md         Return-to-dust protocol
 templates/RETURN_TO_DUST_TEST.md  Return-to-dust test checklist
 templates/AUDIT.md            Logs, reviewers, tests, escalation
 templates/MEMORY.md           What may be remembered, forgotten, or never stored
-SOURCES.md                    Citation map with claim boundaries
+SOURCES.md                    Bibliography and citation map with claim boundaries
 SECURITY.md                   Security and runtime-safety reporting guidance
 llms.txt                      Bot-friendly entry point
 .well-known/golem.json        Machine-readable project discovery

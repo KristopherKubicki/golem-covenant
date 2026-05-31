@@ -208,16 +208,26 @@ This covenant is in conversation with sources about delegated power, speech,
 rest, dignity, trust, balance, harm, and revocation. Citations are labels for
 bounded claims, not claims of completed religious synthesis.
 
+Use conventional references in prose, such as `Sanhedrin 65b`, `Genesis 1:27`,
+`Qur'an 4:58`, `RFC 2119`, `NIST AI RMF 1.0`, or `Antiqua et Nova`. Use the
+stable labels below when tracing a specific project claim to its source and
+limit.
+
 - [J-GOLEM-1](SOURCES.md#j-golem-1-sanhedrin-65b): golem, speech, return to dust
 - [J-GOLEM-2](SOURCES.md#j-golem-2-yivo-encyclopedia-golem-legend): later Prague golem legend
 - [J-DIGNITY-1](SOURCES.md#j-dignity-1-genesis-127): human dignity
 - [J-DUST-1](SOURCES.md#j-dust-1-genesis-27): dust and breath
 - [J-BABEL-1](SOURCES.md#j-babel-1-genesis-111-9): Babel and scale without humility
+- [J-REST-1](SOURCES.md#j-rest-1-exodus-208-11-and-deuteronomy-512-15): rest as a control surface
 - [J-EMERGENCY-1](SOURCES.md#j-emergency-1-yoma-85b): emergency and life
 - [C-AI-1](SOURCES.md#c-ai-1-antiqua-et-nova): Catholic AI ethics
+- [C-AI-2](SOURCES.md#c-ai-2-magnifica-humanitas): AI, Babel, and common-good framing
 - [I-TRUST-1](SOURCES.md#i-trust-1-quran-3372-and-quran-458): trust and justice
 - [I-BALANCE-1](SOURCES.md#i-balance-1-quran-557-9): balance and measure
+- [I-MAQASID-1](SOURCES.md#i-maqasid-1-mohammad-hashim-kamali-maqasid-al-shariah-made-simple): protected goods
+- [T-SCHEMA-1](SOURCES.md#t-schema-1-json-schema-draft-2020-12): schema-validatable declarations
 - [T-RFC-1](SOURCES.md#t-rfc-1-rfc-2119) and [T-RFC-2](SOURCES.md#t-rfc-2-rfc-8174): normative language
 - [T-RISK-1](SOURCES.md#t-risk-1-nist-ai-risk-management-framework-10): AI risk management
 
-See `SOURCES.md` for source classes, exact supported claims, and limits.
+See `SOURCES.md` for the conventional bibliography, source classes, exact
+supported claims, and limits.

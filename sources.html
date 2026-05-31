@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Citation Map - The Golem Covenant</title>
-  <meta name="description" content="A claim-bounded citation map for the Golem Covenant.">
+  <title>Bibliography and Citation Map - The Golem Covenant</title>
+  <meta name="description" content="A conventional bibliography and claim-bounded citation map for the Golem Covenant.">
   <link rel="canonical" href="https://golem.md/sources.html">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -25,7 +25,6 @@
       --panel: #ffffff;
       --accent: #8f1f3d;
       --teal: #1d6f74;
-      --gold: #9a6a1b;
       --code: #f1f4f7;
     }
     @media (prefers-color-scheme: dark) {
@@ -38,7 +37,6 @@
         --panel: #151a20;
         --accent: #f07a96;
         --teal: #6bc2c8;
-        --gold: #d7b16a;
         --code: #1d242c;
       }
     }
@@ -50,7 +48,15 @@
       background: var(--bg);
       font: 17px/1.62 ui-serif, Georgia, Cambria, "Times New Roman", serif;
     }
-    a { color: var(--accent); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+    a:focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 3px;
+    }
     code {
       background: var(--code);
       border: 1px solid var(--line);
@@ -100,7 +106,7 @@
       text-decoration: none;
     }
     .wrap {
-      width: min(980px, calc(100% - 32px));
+      width: min(1020px, calc(100% - 32px));
       margin: 0 auto;
       padding: 46px 0 78px;
     }
@@ -132,7 +138,7 @@
       color: var(--muted);
       font-size: 21px;
       line-height: 1.45;
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 0 24px;
     }
     .notice {
@@ -187,6 +193,16 @@
       margin: 0 0 10px;
     }
     .source p:last-child { margin-bottom: 0; }
+    .bibliography {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+    .bibliography li { margin: 0 0 10px; }
+    .bibliography a {
+      font: 800 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+      text-decoration: none;
+    }
     .links {
       display: flex;
       flex-wrap: wrap;
@@ -238,27 +254,87 @@
   </header>
 
   <main class="wrap">
-    <p class="eyebrow">Citation map</p>
-    <h1>Sources as claim boundaries</h1>
-    <p class="lede">A source in the Golem Covenant supports a named proposition, definition, or implementation boundary. It does not become decorative authority.</p>
+    <p class="eyebrow">Sources</p>
+    <h1>Bibliography and claim map</h1>
+    <p class="lede">Conventional citations first, stable claim labels underneath. The labels are traceability IDs, not a substitute for normal references.</p>
 
     <div class="notice">
-      The raw source register is <a href="./SOURCES.md"><code>/SOURCES.md</code></a>.
-      This page gives stable labels and readable anchors for humans.
+      The source of truth is <a href="./SOURCES.md"><code>/SOURCES.md</code></a>.
+      This page makes the same material easier to scan.
     </div>
 
     <section id="method">
       <h2>Method</h2>
-      <p>Each source has a label, a source class, an exact use, and a limit. This keeps the standard closer to a mathematical proof: cite the proposition you are using, and do not infer more than the citation supports.</p>
+      <p>The Covenant uses sources the way a proof uses lemmas: each citation supports one bounded proposition and refuses overreach. In prose, use ordinary references such as <cite>Sanhedrin</cite> 65b, <cite>Genesis</cite> 1:27, <cite>Qur'an</cite> 4:58, RFC 2119, NIST AI RMF 1.0, or <cite>Antiqua et Nova</cite>. In claim tables, use labels such as <code>J-GOLEM-1</code> so the claim, source, and limit stay connected.</p>
       <table>
         <thead><tr><th>Part</th><th>Meaning</th></tr></thead>
         <tbody>
+          <tr><td>Conventional citation</td><td>The normal bibliographic form a reader expects.</td></tr>
           <tr><td>Claim</td><td>The project proposition being supported.</td></tr>
-          <tr><td>Label</td><td>The stable citation id used in the spec and site.</td></tr>
+          <tr><td>Label</td><td>The stable citation ID used in the spec and site.</td></tr>
           <tr><td>Used for</td><td>The bounded claim the source is allowed to support.</td></tr>
           <tr><td>Not used for</td><td>The inference the project explicitly refuses to make.</td></tr>
         </tbody>
       </table>
+    </section>
+
+    <section id="bibliography">
+      <h2>Conventional bibliography</h2>
+      <div class="source-grid">
+        <article class="source">
+          <h3>Primary Jewish and biblical</h3>
+          <ol class="bibliography">
+            <li>Babylonian Talmud. <cite>Sanhedrin</cite> 65b. Sefaria. Label: <a href="#j-golem-1">J-GOLEM-1</a>.</li>
+            <li>Hebrew Bible. <cite>Genesis</cite> 1:27. Sefaria. Label: <a href="#j-dignity-1">J-DIGNITY-1</a>.</li>
+            <li>Hebrew Bible. <cite>Genesis</cite> 2:7. Sefaria. Label: <a href="#j-dust-1">J-DUST-1</a>.</li>
+            <li>Hebrew Bible. <cite>Genesis</cite> 11:1-9. Sefaria. Label: <a href="#j-babel-1">J-BABEL-1</a>.</li>
+            <li>Hebrew Bible. <cite>Exodus</cite> 20:8-11 and <cite>Deuteronomy</cite> 5:12-15. Sefaria. Label: <a href="#j-rest-1">J-REST-1</a>.</li>
+            <li>Hebrew Bible. <cite>Exodus</cite> 31:2-6. Sefaria. Label: <a href="#j-bezalel-1">J-BEZALEL-1</a>.</li>
+            <li>Babylonian Talmud. <cite>Yoma</cite> 85b. Sefaria. Label: <a href="#j-emergency-1">J-EMERGENCY-1</a>.</li>
+            <li>Babylonian Talmud. <cite>Shabbat</cite> 151b. Sefaria. Label: <a href="#j-emergency-2">J-EMERGENCY-2</a>.</li>
+            <li>Hebrew Bible. <cite>Deuteronomy</cite> 20:19. Sefaria. Label: <a href="#j-restraint-1">J-RESTRAINT-1</a>.</li>
+            <li>Hebrew Bible. <cite>Leviticus</cite> 19:16. Sefaria. Label: <a href="#j-danger-1">J-DANGER-1</a>.</li>
+          </ol>
+        </article>
+        <article class="source">
+          <h3>Jewish historical</h3>
+          <ol class="bibliography">
+            <li>YIVO Encyclopedia of Jews in Eastern Europe. "Golem Legend." Label: <a href="#j-golem-2">J-GOLEM-2</a>.</li>
+            <li>Jewish Encyclopedia. "Golem." Label: <a href="#j-golem-3">J-GOLEM-3</a>.</li>
+          </ol>
+          <h3>Christian</h3>
+          <ol class="bibliography">
+            <li>New Testament. <cite>John</cite> 1:14. Bible Gateway, NRSVUE. Label: <a href="#c-dignity-1">C-DIGNITY-1</a>.</li>
+            <li>Second Vatican Council. <cite>Gaudium et Spes</cite>. December 7, 1965. Label: <a href="#c-dignity-2">C-DIGNITY-2</a>.</li>
+            <li>Dicastery for the Doctrine of the Faith and Dicastery for Culture and Education. <cite>Antiqua et Nova</cite>. January 28, 2025. Label: <a href="#c-ai-1">C-AI-1</a>.</li>
+            <li>Leo XIV. <cite>Magnifica Humanitas</cite>. May 15, 2026. Label: <a href="#c-ai-2">C-AI-2</a>.</li>
+          </ol>
+        </article>
+        <article class="source">
+          <h3>Islamic</h3>
+          <ol class="bibliography">
+            <li>The Qur'an. 33:72 and 4:58. Quran.com. Label: <a href="#i-trust-1">I-TRUST-1</a>.</li>
+            <li>The Qur'an. 2:30 and 6:165. Quran.com. Label: <a href="#i-stewardship-1">I-STEWARDSHIP-1</a>.</li>
+            <li>The Qur'an. 55:7-9. Quran.com. Label: <a href="#i-balance-1">I-BALANCE-1</a>.</li>
+            <li>The Qur'an. 5:32, 2:205, and 7:31. Quran.com. Label: <a href="#i-harm-1">I-HARM-1</a>.</li>
+            <li>Kamali, Mohammad Hashim. <cite>Maqasid Al-Shariah Made Simple</cite>. International Institute of Islamic Thought. Label: <a href="#i-maqasid-1">I-MAQASID-1</a>.</li>
+          </ol>
+        </article>
+        <article class="source">
+          <h3>Technical and governance</h3>
+          <ol class="bibliography">
+            <li>Bradner, Scott. "Key words for use in RFCs to Indicate Requirement Levels." RFC 2119. RFC Editor, March 1997. Label: <a href="#t-rfc-1">T-RFC-1</a>.</li>
+            <li>Leiba, Barry. "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words." RFC 8174. RFC Editor, May 2017. Label: <a href="#t-rfc-2">T-RFC-2</a>.</li>
+            <li>JSON Schema. <cite>JSON Schema: A Media Type for Describing JSON Documents</cite>. Draft 2020-12. Label: <a href="#t-schema-1">T-SCHEMA-1</a>.</li>
+            <li>National Institute of Standards and Technology. <cite>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</cite>. NIST AI 100-1. January 2023. Label: <a href="#t-risk-1">T-RISK-1</a>.</li>
+            <li>OECD. <cite>OECD AI Principles</cite>. Adopted 2019, updated 2024. Label: <a href="#t-risk-2">T-RISK-2</a>.</li>
+            <li>GitHub Docs. "Managing a custom domain for your GitHub Pages site." Label: <a href="#t-publish-1">T-PUBLISH-1</a>.</li>
+            <li>Koster, Martijn, et al. "Robots Exclusion Protocol." RFC 9309. RFC Editor, September 2022. Label: <a href="#t-bot-1">T-BOT-1</a>.</li>
+            <li>llms.txt proposal. Label: <a href="#t-bot-2">T-BOT-2</a>.</li>
+            <li>OpenClaw. "SOUL.md template." Label: <a href="#a-soul-1">A-SOUL-1</a>.</li>
+          </ol>
+        </article>
+      </div>
     </section>
 
     <section id="claims">
@@ -268,13 +344,22 @@
         <tbody>
           <tr><td>C1</td><td>Golem includes creation, failed speech, recognition, and return to dust.</td><td><a href="#j-golem-1">J-GOLEM-1</a></td></tr>
           <tr><td>C2</td><td>The familiar Prague/Maharal story is later folklore, not the Talmudic source.</td><td><a href="#j-golem-2">J-GOLEM-2</a>, <a href="#j-golem-3">J-GOLEM-3</a></td></tr>
-          <tr><td>C3</td><td>Humans are not raw material for optimization.</td><td><a href="#j-dignity-1">J-DIGNITY-1</a>, <a href="#c-dignity-1">C-DIGNITY-1</a>, <a href="#c-ai-1">C-AI-1</a></td></tr>
+          <tr><td>C3</td><td>Humans are not raw material for optimization.</td><td><a href="#j-dignity-1">J-DIGNITY-1</a>, <a href="#c-dignity-1">C-DIGNITY-1</a>, <a href="#c-dignity-2">C-DIGNITY-2</a>, <a href="#c-ai-1">C-AI-1</a></td></tr>
           <tr><td>C4</td><td>Clay plus command is a metaphor for made agency, not software personhood.</td><td><a href="#j-dust-1">J-DUST-1</a>, <a href="#j-golem-1">J-GOLEM-1</a></td></tr>
-          <tr><td>C5</td><td>Scale without humility is dangerous; construction itself is not condemned.</td><td><a href="#j-babel-1">J-BABEL-1</a>, <a href="#j-bezalel-1">J-BEZALEL-1</a></td></tr>
-          <tr><td>C6</td><td>Emergency authority must stay narrower than ordinary ambition.</td><td><a href="#j-emergency-1">J-EMERGENCY-1</a>, <a href="#i-harm-1">I-HARM-1</a></td></tr>
-          <tr><td>C7</td><td>Trust, stewardship, balance, and accountability are useful Islamic lenses.</td><td><a href="#i-trust-1">I-TRUST-1</a>, <a href="#i-stewardship-1">I-STEWARDSHIP-1</a>, <a href="#i-balance-1">I-BALANCE-1</a></td></tr>
-          <tr><td>C8</td><td>MUST/SHOULD/MAY separates requirements from recommendations.</td><td><a href="#t-rfc-1">T-RFC-1</a>, <a href="#t-rfc-2">T-RFC-2</a></td></tr>
-          <tr><td>C9</td><td>Runtime vocabulary should include risk, monitoring, accountability, and human-centered design.</td><td><a href="#t-risk-1">T-RISK-1</a>, <a href="#t-risk-2">T-RISK-2</a></td></tr>
+          <tr><td>C5</td><td>Scale without humility is dangerous; construction itself is not condemned.</td><td><a href="#j-babel-1">J-BABEL-1</a>, <a href="#j-bezalel-1">J-BEZALEL-1</a>, <a href="#c-ai-2">C-AI-2</a></td></tr>
+          <tr><td>C6</td><td>The Covenant is triggered by delegated consequence, not by mere automation.</td><td><a href="#t-risk-1">T-RISK-1</a>, <a href="#t-risk-2">T-RISK-2</a></td></tr>
+          <tr><td>C7</td><td>Sandboxed work can remain below the line until it affects people or systems outside the sandbox.</td><td><a href="#t-risk-1">T-RISK-1</a>, <a href="#t-schema-1">T-SCHEMA-1</a></td></tr>
+          <tr><td>C8</td><td>Agent powers should be declared as bounded organs: mouth, purse, seal, key, and sword.</td><td><a href="#t-risk-1">T-RISK-1</a>, <a href="#t-risk-2">T-RISK-2</a>, <a href="#c-ai-1">C-AI-1</a>, <a href="#i-trust-1">I-TRUST-1</a></td></tr>
+          <tr><td>C9</td><td>Rest mode and quiet mode are legitimate control surfaces for delegated power.</td><td><a href="#j-rest-1">J-REST-1</a>, <a href="#j-emergency-1">J-EMERGENCY-1</a>, <a href="#j-emergency-2">J-EMERGENCY-2</a></td></tr>
+          <tr><td>C10</td><td>Emergency authority must stay narrower than ordinary ambition.</td><td><a href="#j-emergency-1">J-EMERGENCY-1</a>, <a href="#j-danger-1">J-DANGER-1</a>, <a href="#i-harm-1">I-HARM-1</a></td></tr>
+          <tr><td>C11</td><td>Environmental and material harm belong in the risk model.</td><td><a href="#j-restraint-1">J-RESTRAINT-1</a>, <a href="#c-ai-1">C-AI-1</a>, <a href="#i-balance-1">I-BALANCE-1</a>, <a href="#i-harm-1">I-HARM-1</a></td></tr>
+          <tr><td>C12</td><td>Trust, stewardship, balance, and accountability are useful Islamic lenses.</td><td><a href="#i-trust-1">I-TRUST-1</a>, <a href="#i-stewardship-1">I-STEWARDSHIP-1</a>, <a href="#i-balance-1">I-BALANCE-1</a></td></tr>
+          <tr><td>C13</td><td>Maqasid language helps name protected goods without becoming a complete AI ruling.</td><td><a href="#i-maqasid-1">I-MAQASID-1</a></td></tr>
+          <tr><td>C14</td><td>MUST/SHOULD/MAY separates requirements from recommendations.</td><td><a href="#t-rfc-1">T-RFC-1</a>, <a href="#t-rfc-2">T-RFC-2</a></td></tr>
+          <tr><td>C15</td><td>Machine-readable declarations should be schema-validatable.</td><td><a href="#t-schema-1">T-SCHEMA-1</a></td></tr>
+          <tr><td>C16</td><td>Runtime vocabulary should include risk, monitoring, accountability, transparency, and human-centered design.</td><td><a href="#t-risk-1">T-RISK-1</a>, <a href="#t-risk-2">T-RISK-2</a>, <a href="#c-ai-1">C-AI-1</a></td></tr>
+          <tr><td>C17</td><td>Public discovery files help humans, bots, and crawlers find canonical project materials.</td><td><a href="#t-bot-1">T-BOT-1</a>, <a href="#t-bot-2">T-BOT-2</a>, <a href="#t-publish-1">T-PUBLISH-1</a></td></tr>
+          <tr><td>C18</td><td>A SOUL.md-style file can be adapted from agent identity toward covenantal restraint.</td><td><a href="#a-soul-1">A-SOUL-1</a></td></tr>
         </tbody>
       </table>
     </section>
@@ -282,25 +367,35 @@
     <section id="register">
       <h2>Source register</h2>
       <div class="source-grid">
-        <article class="source" id="j-golem-1"><strong>J-GOLEM-1</strong><p><a href="https://www.sefaria.org/Sanhedrin.65b">Sanhedrin 65b</a>. Used for the terse golem motif: creation, failed speech, recognition, return to dust.</p><p>Not used for the Prague legend or an AI ruling.</p></article>
-        <article class="source" id="j-golem-2"><strong>J-GOLEM-2</strong><p><a href="https://encyclopedia.yivo.org/article.aspx/Golem_Legend">YIVO Encyclopedia, Golem Legend</a>. Used for the later Prague/Maharal folklore tradition.</p><p>Not used as the Talmudic source.</p></article>
-        <article class="source" id="j-golem-3"><strong>J-GOLEM-3</strong><p><a href="https://jewishencyclopedia.com/articles/6777-golem">Jewish Encyclopedia, Golem</a>. Used for historical folklore triangulation.</p><p>Not used as a final account of every golem tradition.</p></article>
-        <article class="source" id="j-dignity-1"><strong>J-DIGNITY-1</strong><p><a href="https://www.sefaria.org/Genesis.1.27">Genesis 1:27</a>. Used for human dignity and anti-instrumentalization.</p><p>Not used to claim agents are made in the divine image.</p></article>
-        <article class="source" id="j-dust-1"><strong>J-DUST-1</strong><p><a href="https://www.sefaria.org/Genesis.2.7">Genesis 2:7</a>. Used for dust, breath, creatureliness, command, and limits.</p><p>Not used to claim software has breath or a soul.</p></article>
-        <article class="source" id="j-babel-1"><strong>J-BABEL-1</strong><p><a href="https://www.sefaria.org/Genesis.11.1-9">Genesis 11:1-9</a>. Used for scale without humility.</p><p>Not used to condemn construction or technical coordination.</p></article>
-        <article class="source" id="j-bezalel-1"><strong>J-BEZALEL-1</strong><p><a href="https://www.sefaria.org/Exodus.31.2-6">Exodus 31:2-6</a>. Used for craft under wisdom, understanding, knowledge, and measure.</p><p>Not used to call all technology sacred.</p></article>
-        <article class="source" id="j-emergency-1"><strong>J-EMERGENCY-1</strong><p><a href="https://www.sefaria.org/Yoma.85b">Yoma 85b</a>. Used for genuine emergency overriding ordinary rest constraints.</p><p>Not used for revenue, reputation, growth, or business continuity.</p></article>
-        <article class="source" id="c-dignity-1"><strong>C-DIGNITY-1</strong><p><a href="https://www.biblegateway.com/passage/?search=John%201%3A14&amp;version=NRSVUE">John 1:14</a>. Used for Christian emphasis on embodied human dignity.</p><p>Not used to claim this project states Christian doctrine.</p></article>
-        <article class="source" id="c-ai-1"><strong>C-AI-1</strong><p><a href="https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html">Antiqua et Nova</a>. Used for dignity, common good, privacy, accountability, and AI caution.</p><p>Not used as project certification.</p></article>
-        <article class="source" id="c-ai-2"><strong>C-AI-2</strong><p><a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html">Magnifica Humanitas</a>. Used for AI, construction, Babel, and common-good framing.</p><p>Not used in place of Christian review.</p></article>
-        <article class="source" id="i-trust-1"><strong>I-TRUST-1</strong><p><a href="https://quran.com/al-ahzab/72">Qur'an 33:72</a> and <a href="https://quran.com/4/58">Qur'an 4:58</a>. Used for trust, responsibility, and justice.</p><p>Not used as an Islamic legal ruling.</p></article>
-        <article class="source" id="i-stewardship-1"><strong>I-STEWARDSHIP-1</strong><p><a href="https://quran.com/2/30">Qur'an 2:30</a> and <a href="https://quran.com/6/165">Qur'an 6:165</a>. Used for stewardship and power as trial.</p><p>Not used to make agents moral stewards.</p></article>
-        <article class="source" id="i-balance-1"><strong>I-BALANCE-1</strong><p><a href="https://quran.com/55/7-9">Qur'an 55:7-9</a>. Used for balance, measure, justice, and proportionality.</p><p>Not used as a full Islamic technical ethics framework.</p></article>
-        <article class="source" id="i-harm-1"><strong>I-HARM-1</strong><p><a href="https://quran.com/5/32">Qur'an 5:32</a>, <a href="https://quran.com/2/205">Qur'an 2:205</a>, and <a href="https://quran.com/7/31">Qur'an 7:31</a>. Used for protection from harm, corruption, and excess.</p><p>Not used to authorize broad autonomous intervention.</p></article>
+        <article class="source" id="j-golem-1"><strong>J-GOLEM-1</strong><p><a href="https://www.sefaria.org/Sanhedrin.65b">Babylonian Talmud, <cite>Sanhedrin</cite> 65b</a>. Used for creation, failed speech, recognition, and return to dust.</p><p>Not used for the Prague legend or an AI ruling.</p></article>
+        <article class="source" id="j-golem-2"><strong>J-GOLEM-2</strong><p><a href="https://encyclopedia.yivo.org/article.aspx/Golem_Legend">YIVO Encyclopedia, "Golem Legend"</a>. Used for the later Prague/Maharal folklore tradition.</p><p>Not used as the Talmudic source.</p></article>
+        <article class="source" id="j-golem-3"><strong>J-GOLEM-3</strong><p><a href="https://jewishencyclopedia.com/articles/6777-golem">Jewish Encyclopedia, "Golem"</a>. Used for historical folklore triangulation.</p><p>Not used as a final account of every golem tradition.</p></article>
+        <article class="source" id="j-dignity-1"><strong>J-DIGNITY-1</strong><p><a href="https://www.sefaria.org/Genesis.1.27">Hebrew Bible, <cite>Genesis</cite> 1:27</a>. Used for human dignity and anti-instrumentalization.</p><p>Not used to claim agents are made in the divine image.</p></article>
+        <article class="source" id="j-dust-1"><strong>J-DUST-1</strong><p><a href="https://www.sefaria.org/Genesis.2.7">Hebrew Bible, <cite>Genesis</cite> 2:7</a>. Used for dust, breath, creatureliness, command, and limits.</p><p>Not used to claim software has breath or a soul.</p></article>
+        <article class="source" id="j-babel-1"><strong>J-BABEL-1</strong><p><a href="https://www.sefaria.org/Genesis.11.1-9">Hebrew Bible, <cite>Genesis</cite> 11:1-9</a>. Used for scale without humility.</p><p>Not used to condemn construction or technical coordination.</p></article>
+        <article class="source" id="j-rest-1"><strong>J-REST-1</strong><p><a href="https://www.sefaria.org/Exodus.20.8-11">Hebrew Bible, <cite>Exodus</cite> 20:8-11</a> and <a href="https://www.sefaria.org/Deuteronomy.5.12-15"><cite>Deuteronomy</cite> 5:12-15</a>. Used for rest as a limit on ordinary productive will.</p><p>Not used as a detailed automation ruling.</p></article>
+        <article class="source" id="j-bezalel-1"><strong>J-BEZALEL-1</strong><p><a href="https://www.sefaria.org/Exodus.31.2-6">Hebrew Bible, <cite>Exodus</cite> 31:2-6</a>. Used for craft under wisdom, understanding, knowledge, and measure.</p><p>Not used to call all technology sacred.</p></article>
+        <article class="source" id="j-emergency-1"><strong>J-EMERGENCY-1</strong><p><a href="https://www.sefaria.org/Yoma.85b">Babylonian Talmud, <cite>Yoma</cite> 85b</a>. Used for genuine emergency overriding ordinary rest constraints.</p><p>Not used for revenue, reputation, growth, or business continuity.</p></article>
+        <article class="source" id="j-emergency-2"><strong>J-EMERGENCY-2</strong><p><a href="https://www.sefaria.org/Shabbat.151b">Babylonian Talmud, <cite>Shabbat</cite> 151b</a>. Used for Shabbat and human vulnerability as lenses for bounded action.</p><p>Not used as a detailed automation ruling.</p></article>
+        <article class="source" id="j-restraint-1"><strong>J-RESTRAINT-1</strong><p><a href="https://www.sefaria.org/Deuteronomy.20.19">Hebrew Bible, <cite>Deuteronomy</cite> 20:19</a>. Used for restraint against wanton destruction.</p><p>Not used as a full environmental legal analysis.</p></article>
+        <article class="source" id="j-danger-1"><strong>J-DANGER-1</strong><p><a href="https://www.sefaria.org/Leviticus.19.16">Hebrew Bible, <cite>Leviticus</cite> 19:16</a>. Used for narrow danger-response duties.</p><p>Not used to authorize unbounded agent intervention.</p></article>
+        <article class="source" id="c-dignity-1"><strong>C-DIGNITY-1</strong><p><a href="https://www.biblegateway.com/passage/?search=John%201%3A14&amp;version=NRSVUE">New Testament, <cite>John</cite> 1:14</a>. Used for Christian emphasis on embodied human dignity.</p><p>Not used to claim this project states Christian doctrine.</p></article>
+        <article class="source" id="c-dignity-2"><strong>C-DIGNITY-2</strong><p><a href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html"><cite>Gaudium et Spes</cite></a>. Used for the whole human person, solidarity, technical power, and responsibility.</p><p>Not used as a direct AI governance ruling.</p></article>
+        <article class="source" id="c-ai-1"><strong>C-AI-1</strong><p><a href="https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html"><cite>Antiqua et Nova</cite></a>. Used for dignity, common good, privacy, accountability, and AI caution.</p><p>Not used as project certification.</p></article>
+        <article class="source" id="c-ai-2"><strong>C-AI-2</strong><p><a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html"><cite>Magnifica Humanitas</cite></a>. Used for AI, construction, Babel, and common-good framing.</p><p>Not used in place of Christian review.</p></article>
+        <article class="source" id="i-trust-1"><strong>I-TRUST-1</strong><p><a href="https://quran.com/al-ahzab/72">The Qur'an 33:72</a> and <a href="https://quran.com/4/58">4:58</a>. Used for trust, responsibility, and justice.</p><p>Not used as an Islamic legal ruling.</p></article>
+        <article class="source" id="i-stewardship-1"><strong>I-STEWARDSHIP-1</strong><p><a href="https://quran.com/2/30">The Qur'an 2:30</a> and <a href="https://quran.com/6/165">6:165</a>. Used for stewardship and power as trial.</p><p>Not used to make agents moral stewards.</p></article>
+        <article class="source" id="i-balance-1"><strong>I-BALANCE-1</strong><p><a href="https://quran.com/55/7-9">The Qur'an 55:7-9</a>. Used for balance, measure, justice, and proportionality.</p><p>Not used as a full Islamic technical ethics framework.</p></article>
+        <article class="source" id="i-harm-1"><strong>I-HARM-1</strong><p><a href="https://quran.com/5/32">The Qur'an 5:32</a>, <a href="https://quran.com/2/205">2:205</a>, and <a href="https://quran.com/7/31">7:31</a>. Used for protection from harm, corruption, and excess.</p><p>Not used to authorize broad autonomous intervention.</p></article>
+        <article class="source" id="i-maqasid-1"><strong>I-MAQASID-1</strong><p><a href="https://iiit.org/wp-content/uploads/MaqasidAl-ShariahMadeSimple-UPDATED-RED.pdf">Kamali, <cite>Maqasid Al-Shariah Made Simple</cite></a>. Used for protected-goods language.</p><p>Not used to claim consensus on AI governance.</p></article>
         <article class="source" id="t-rfc-1"><strong>T-RFC-1</strong><p><a href="https://www.rfc-editor.org/rfc/rfc2119">RFC 2119</a>. Used for MUST, SHOULD, and MAY.</p><p>Not used for the substance of covenant requirements.</p></article>
         <article class="source" id="t-rfc-2"><strong>T-RFC-2</strong><p><a href="https://www.rfc-editor.org/rfc/rfc8174">RFC 8174</a>. Used for uppercase/lowercase clarification.</p><p>Not used for the substance of covenant requirements.</p></article>
+        <article class="source" id="t-schema-1"><strong>T-SCHEMA-1</strong><p><a href="https://json-schema.org/draft/2020-12/json-schema-core">JSON Schema Draft 2020-12</a>. Used for schema-validatable manifests.</p><p>Not used for moral or religious claims.</p></article>
         <article class="source" id="t-risk-1"><strong>T-RISK-1</strong><p><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a>. Used for risk, monitoring, accountability, and human-centered design vocabulary.</p><p>Not used as certification.</p></article>
-        <article class="source" id="t-risk-2"><strong>T-RISK-2</strong><p><a href="https://oecd.ai/en/ai-principles">OECD AI Principles</a>. Used for responsible AI governance vocabulary.</p><p>Not used as certification or legal compliance.</p></article>
+        <article class="source" id="t-risk-2"><strong>T-RISK-2</strong><p><a href="https://www.oecd.org/en/topics/ai-principles.html">OECD AI Principles</a>. Used for responsible AI governance vocabulary.</p><p>Not used as certification or legal compliance.</p></article>
+        <article class="source" id="t-publish-1"><strong>T-PUBLISH-1</strong><p><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">GitHub Pages custom domains</a>. Used for public site setup.</p><p>Not used for covenant substance.</p></article>
+        <article class="source" id="t-bot-1"><strong>T-BOT-1</strong><p><a href="https://www.rfc-editor.org/rfc/rfc9309">RFC 9309</a>. Used for bot-facing publication conventions around robots.txt.</p><p>Not used for covenant conformance.</p></article>
+        <article class="source" id="t-bot-2"><strong>T-BOT-2</strong><p><a href="https://llmstxt.org/">llms.txt proposal</a>. Used for bot-friendly entry point conventions.</p><p>Not used for normative agent behavior.</p></article>
         <article class="source" id="a-soul-1"><strong>A-SOUL-1</strong><p><a href="https://docs.openclaw.ai/reference/templates/SOUL">OpenClaw SOUL.md template</a>. Used for the SOUL.md file genre.</p><p>Not used to adopt personality-first agent design.</p></article>
       </div>
       <nav class="links" aria-label="Source files">
