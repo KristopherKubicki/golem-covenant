@@ -16,6 +16,8 @@
     "schema": "https://golem.md/schema/golem.schema.json",
     "manifest": "https://golem.md/golem.yml",
     "conformance": "https://golem.md/docs/conformance.md",
+    "adopt": "https://golem.md/adopt.html",
+    "for_labs": "https://golem.md/for-labs.html",
     "soul": "https://golem.md/soul.md",
     "sources": "https://golem.md/SOURCES.md",
     "readable_sources": "https://golem.md/sources.html",

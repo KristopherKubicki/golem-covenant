@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adopt golem.md - The Golem Covenant</title>
+  <meta name="description" content="A practical adoption guide for adding the Golem Covenant to an agent, bot, automation, or tool-calling system.">
+  <link rel="canonical" href="https://golem.md/adopt.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="mask-icon" href="/favicon.svg" color="#8f1f3d">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="golem.md">
+  <meta name="theme-color" content="#8f1f3d">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Adopt golem.md",
+    "headline": "Adopt the Covenant",
+    "description": "A practical adoption guide for adding the Golem Covenant to an agent, bot, automation, or tool-calling system.",
+    "url": "https://golem.md/adopt.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "The Golem Covenant",
+      "url": "https://golem.md/"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f8fa;
+      --ink: #11161d;
+      --muted: #53606d;
+      --soft: #eef2f5;
+      --line: #d6dde4;
+      --panel: #ffffff;
+      --accent: #8f1f3d;
+      --teal: #1d6f74;
+      --code: #f1f4f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101317;
+        --ink: #eef3f8;
+        --muted: #abb6c2;
+        --soft: #171d23;
+        --line: #2b3540;
+        --panel: #151a20;
+        --accent: #f07a96;
+        --teal: #6bc2c8;
+        --code: #1d242c;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font: 17px/1.62 ui-serif, Georgia, Cambria, "Times New Roman", serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    a:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+    code {
+      background: var(--code);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 0.1em 0.28em;
+      font: 0.9em/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      font: 14px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+      font: 700 13px/1.2 ui-sans-serif, system-ui, sans-serif;
+    }
+    .topbar-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 26px;
+      height: 26px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      color: var(--accent);
+      font-size: 14px;
+    }
+    .toplinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+    .toplinks a { color: var(--muted); text-decoration: none; }
+    .wrap {
+      width: min(1020px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 46px 0 78px;
+    }
+    .eyebrow {
+      color: var(--accent);
+      font: 800 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 14px;
+    }
+    h1 { font-size: 52px; line-height: 1; letter-spacing: 0; margin: 0 0 18px; }
+    h2 { font-size: 30px; line-height: 1.15; margin: 0 0 14px; }
+    h3 {
+      font: 800 15px/1.2 ui-sans-serif, system-ui, sans-serif;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+    p { margin: 0 0 16px; }
+    .lede {
+      color: var(--muted);
+      font-size: 21px;
+      line-height: 1.45;
+      max-width: 820px;
+      margin: 0 0 24px;
+    }
+    .notice {
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 16px 18px;
+      margin: 24px 0 34px;
+      color: var(--muted);
+    }
+    section { padding: 34px 0; border-top: 1px solid var(--line); }
+    ul, ol { margin: 0 0 18px; padding-left: 22px; }
+    li { margin: 0 0 8px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 14px 15px;
+    }
+    .card p { color: var(--muted); }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 8px 12px;
+      text-decoration: none;
+      font: 800 14px/1.2 ui-sans-serif, system-ui, sans-serif;
+    }
+    .button.primary { color: var(--accent); border-color: var(--accent); }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .topbar-inner { flex-direction: column; align-items: flex-start; padding: 14px 0; }
+      .toplinks { justify-content: flex-start; }
+      h1 { font-size: 38px; }
+      .lede { font-size: 18px; }
+      .button { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span>golem.md</span>
+      </a>
+      <nav class="toplinks" aria-label="Primary">
+        <a href="./spec.html">Spec</a>
+        <a href="./adopt.html">Adopt</a>
+        <a href="./for-labs.html">For Labs</a>
+        <a href="./sources.html">Sources</a>
+        <a href="./ai-access.html">AI Access</a>
+        <a href="https://github.com/KristopherKubicki/golem-covenant">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="eyebrow">Implementation path</p>
+    <h1>Adopt the Covenant.</h1>
+    <p class="lede">A short path for adding golem.md to an agent, bot, automation, or tool-calling system before it acts with real delegated authority.</p>
+
+    <div class="notice">
+      Adoption is not a badge of holiness or compliance. It means the project has declared powers, denied defaults, and tested how the agent returns to dust.
+    </div>
+
+    <section id="quickstart">
+      <h2>Five-minute path</h2>
+      <ol>
+        <li>Copy <a href="./templates/SOUL.md"><code>templates/SOUL.md</code></a> into the agent repository as <code>soul.md</code>.</li>
+        <li>Copy the reference <a href="./golem.yml"><code>golem.yml</code></a> and declare the agent's organs.</li>
+        <li>Validate against <a href="./schema/golem.schema.json"><code>schema/golem.schema.json</code></a>.</li>
+        <li>Fill out <a href="./templates/RETURN_TO_DUST_TEST.md"><code>RETURN_TO_DUST_TEST.md</code></a>.</li>
+        <li>Do not enable real authority until return-to-dust has been tested.</li>
+      </ol>
+      <pre>curl -O https://golem.md/golem.yml
+curl -O https://golem.md/templates/SOUL.md
+curl -O https://golem.md/templates/RETURN_TO_DUST_TEST.md</pre>
+    </section>
+
+    <section id="levels">
+      <h2>Adoption levels</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Declared</h3>
+          <p>The project has a <code>soul.md</code>, a <code>golem.yml</code>, and named organs. Undeclared organs are denied by policy.</p>
+        </article>
+        <article class="card">
+          <h3>Validated</h3>
+          <p>The manifest validates against the schema, and enabled organs declare limits, reviewers, logs, and revocation paths.</p>
+        </article>
+        <article class="card">
+          <h3>Dust-tested</h3>
+          <p>The project has tested shutdown, tool revocation, queue freeze, outbound-channel disablement, and log preservation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="badge">
+      <h2>Badge</h2>
+      <p>Use a badge only when the project has at least reached the declared level. Link the badge to the public manifest or repository docs.</p>
+      <pre>[![Golem Covenant](https://img.shields.io/badge/golem.md-v0.1-8f1f3d)](https://golem.md/)</pre>
+    </section>
+
+    <section id="minimum">
+      <h2>Minimum launch checklist</h2>
+      <ul>
+        <li><code>soul.md</code> exists and names the keeper.</li>
+        <li><code>golem.yml</code> validates against the schema.</li>
+        <li>Mouth, purse, seal, key, and sword are declared.</li>
+        <li>All undeclared organs are denied at runtime.</li>
+        <li>Enabled organs have limits and revocation paths.</li>
+        <li>Logs are written outside the agent's control.</li>
+        <li>Return-to-dust has been tested before launch.</li>
+      </ul>
+      <nav class="links" aria-label="Adoption documents">
+        <a class="button primary" href="./schema/golem.schema.json">Schema</a>
+        <a class="button" href="./docs/conformance.md">Conformance</a>
+        <a class="button" href="./templates/">Templates</a>
+        <a class="button" href="./for-labs.html">For Labs</a>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

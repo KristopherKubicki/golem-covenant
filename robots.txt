@@ -2,6 +2,8 @@
 # user-requested retrieval, and training crawlers are welcome.
 #
 # AI access policy: https://golem.md/ai-access.html
+# Adoption guide: https://golem.md/adopt.html
+# AI lab review memo: https://golem.md/for-labs.html
 # Canonical LLM context: https://golem.md/llms.txt
 
 User-agent: ClaudeBot

@@ -46,6 +46,8 @@ See `CONTRIBUTING.md` for ground rules.
 | `golem.yml` | reference manifest and example implementation |
 | `soul.md` | covenantal template |
 | `templates/*` | implementation aids |
+| `adopt.html` | adoption guide for builders |
+| `for-labs.html` | review memo for AI labs and agent frameworks |
 | `SOURCES.md` | conventional bibliography and citation map with claim boundaries |
 | `ai-access.html` | crawler and AI access policy |
 | `docs/*` | commentary and guidance unless marked normative |
@@ -62,6 +64,8 @@ This repository is prepared for `https://golem.md/` on GitHub Pages.
 - `soul.md` is the lowercase public template.
 - `llms.txt` and `.well-known/golem.json` expose bot-friendly discovery paths.
 - `ai-access.html` declares crawler, AI retrieval, and model-training access.
+- `adopt.html` gives builders a short implementation path.
+- `for-labs.html` gives AI labs and agent-framework maintainers a review memo.
 - `templates/` contains the starter files.
 
 See `docs/github-pages.md` for DNS and Pages setup.
@@ -123,6 +127,8 @@ SECURITY.md                   Security and runtime-safety reporting guidance
 llms.txt                      Bot-friendly entry point
 .well-known/golem.json        Machine-readable project discovery
 ai-access.html                Crawler and AI access policy
+adopt.html                    Adoption guide
+for-labs.html                 Review memo for AI labs and agent frameworks
 ```
 
 Starter templates live in `templates/`.
