@@ -1,7 +1,26 @@
+# golem.md is a public draft standard. Public search, AI search,
+# user-requested retrieval, and training crawlers are welcome.
+#
+# AI access policy: https://golem.md/ai-access.html
+# Canonical LLM context: https://golem.md/llms.txt
+
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Googlebot
+User-agent: Google-Extended
+User-agent: Bingbot
+Allow: /
+
 User-agent: *
 Allow: /
 
 Sitemap: https://golem.md/sitemap.xml
 
-# Agent discovery
+# Non-standard discovery hint. Ordinary robots.txt parsers ignore unknown fields.
 LLMS: https://golem.md/llms.txt

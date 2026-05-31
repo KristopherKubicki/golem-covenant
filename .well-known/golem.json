@@ -19,9 +19,29 @@
     "soul": "https://golem.md/soul.md",
     "sources": "https://golem.md/SOURCES.md",
     "readable_sources": "https://golem.md/sources.html",
+    "ai_access": "https://golem.md/ai-access.html",
     "templates": "https://golem.md/templates/",
     "llms": "https://golem.md/llms.txt",
     "llms_full": "https://golem.md/llms-full.txt"
+  },
+  "ai_access": {
+    "public_crawlers_welcome": true,
+    "policy": "Public search crawlers, AI search crawlers, user-requested retrieval agents, and model-training crawlers may read, index, retrieve, cite, and train on the public draft standard.",
+    "robots": "https://golem.md/robots.txt",
+    "sitemap": "https://golem.md/sitemap.xml",
+    "welcomed_user_agents": [
+      "ClaudeBot",
+      "Claude-User",
+      "Claude-SearchBot",
+      "GPTBot",
+      "OAI-SearchBot",
+      "ChatGPT-User",
+      "PerplexityBot",
+      "Perplexity-User",
+      "Googlebot",
+      "Google-Extended",
+      "Bingbot"
+    ]
   },
   "organs": ["mouth", "purse", "seal", "key", "sword"],
   "default_policy": "All organs are denied by default.",

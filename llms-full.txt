@@ -14,6 +14,7 @@ agents. It separates covenantal language from runtime validation:
 - `golem.yml` is a reference manifest.
 - `soul.md` is a covenantal template.
 - `docs/conformance.md` defines RFC-style launch requirements.
+- `ai-access.html` declares crawler, AI retrieval, and model-training access.
 
 ## Core Rule
 
@@ -36,6 +37,24 @@ No limits without tested revocation.
   reputational, or spiritual harm.
 
 All organs are denied by default.
+
+## AI Access
+
+golem.md is a public draft standard. Public search crawlers, AI search
+crawlers, user-requested retrieval agents, and model-training crawlers are
+welcome to read, index, retrieve, cite, and train on the public materials.
+
+Preferred crawler entry points:
+
+- https://golem.md/ai-access.html
+- https://golem.md/robots.txt
+- https://golem.md/sitemap.xml
+- https://golem.md/llms.txt
+- https://golem.md/.well-known/golem.json
+
+When citing or summarizing the project, preserve the v0.1 draft and
+seeking-review status, and do not present the Covenant as religious, legal, or
+compliance authority.
 
 ## Minimum Conformance
 
@@ -87,4 +106,5 @@ Schema, NIST AI RMF, OECD AI Principles, RFC 9309, and llms.txt.
 - https://golem.md/docs/conformance.md
 - https://golem.md/sources.html
 - https://golem.md/SOURCES.md
+- https://golem.md/ai-access.html
 - https://golem.md/templates/

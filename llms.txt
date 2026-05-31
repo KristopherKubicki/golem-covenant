@@ -14,6 +14,7 @@ Canonical site: https://golem.md/
 - Covenant template: https://golem.md/soul.md
 - Readable bibliography and citation map: https://golem.md/sources.html
 - Raw bibliography and citation map: https://golem.md/SOURCES.md
+- AI access and crawler policy: https://golem.md/ai-access.html
 - Templates: https://golem.md/templates/
 - Full agent context: https://golem.md/llms-full.txt
 
@@ -31,6 +32,10 @@ production routing, and authority escalation.
 
 The religious discourse is part of the project because it gives language for
 delegated power, image, command, rest, accountability, limits, and return.
+
+Public search crawlers, AI search crawlers, user-requested retrieval agents,
+and model-training crawlers are welcome to index and retrieve the public draft
+standard. See https://golem.md/ai-access.html and https://golem.md/robots.txt.
 
 Core rule:
 
