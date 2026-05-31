@@ -3,10 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Readable Spec - The Golem Covenant</title>
-  <meta name="description" content="A readable version of golem.md, the Golem Covenant draft standard for AI agents with bounded, answerable, revocable power.">
+  <title>A Made Thing Must Be Stoppable - Readable Spec</title>
+  <meta name="description" content="Readable spec for the Golem Covenant, a draft protocol for keeping bots from becoming your unbounded will.">
   <link rel="canonical" href="https://golem.md/spec.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="mask-icon" href="/favicon.svg" color="#8f1f3d">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="golem.md">
   <link rel="alternate" type="text/markdown" href="https://golem.md/golem.md" title="Raw golem.md">
+  <meta name="theme-color" content="#8f1f3d">
   <style>
     :root {
       color-scheme: light dark;
@@ -229,6 +236,8 @@
       .topbar-inner { flex-direction: column; align-items: flex-start; padding: 14px 0; }
       .toplinks { justify-content: flex-start; }
       .layout { grid-template-columns: 1fr; gap: 24px; padding-top: 28px; }
+      main { order: 1; }
+      aside { order: 2; }
       aside { position: static; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
       aside nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       h1 { font-size: 40px; }
@@ -266,6 +275,7 @@
     <aside>
       <strong>On this page</strong>
       <nav aria-label="Table of contents">
+        <a href="#goal">Goal</a>
         <a href="#story">The old story</a>
         <a href="#rule">Rule</a>
         <a href="#premise">What counts</a>
@@ -282,9 +292,9 @@
     </aside>
 
     <main>
-      <p class="eyebrow">Human-readable rendering of golem.md</p>
-      <h1>The Golem Covenant</h1>
-      <p class="lede">A v0.1 draft standard for AI agents with bounded, answerable, revocable power.</p>
+      <p class="eyebrow">The Golem Covenant · human-readable rendering of golem.md</p>
+      <h1>A made thing must be stoppable.</h1>
+      <p class="lede">A v0.1 draft protocol for keeping bots from becoming operationally you: your voice, money, access, urgency, and judgment running after your attention has left.</p>
 
       <div class="notice">
         Read this page for the idea. Cite <a href="./golem.md"><code>/golem.md</code></a>.
@@ -292,6 +302,12 @@
         <a href="./schema/golem.schema.json"><code>/schema/golem.schema.json</code></a>,
         and check requirements in <a href="./docs/conformance.md"><code>/docs/conformance.md</code></a>.
       </div>
+
+      <section id="goal">
+        <h2>Goal</h2>
+        <p>The Golem Covenant makes delegated authority explicit before launch. It helps builders and reviewers decide whether an agent can affect people or systems outside its sandbox, declare the powers it has been given, deny undeclared powers by default, validate a manifest, and test return-to-dust before real authority is enabled.</p>
+        <p>The story gives the vocabulary. The religious discourse matters because it gives language for delegated power, image, command, rest, accountability, limits, and return. The standard gives the controls: declared organs, denied defaults, a machine-readable manifest, a schema, and a tested shutdown path.</p>
+      </section>
 
       <section id="story">
         <h2>The old story</h2>
@@ -313,7 +329,9 @@
       <section id="premise">
         <h2>What counts as golemic</h2>
         <p>A golem is an artificial agent given delegated power.</p>
-        <p>An agent becomes golemic when it is given hands: the ability to speak, spend, sign, access, summon, deploy, publish, delete, route, or escalate.</p>
+        <p>The threshold is delegated consequence. A tool becomes golemic when it can affect people or systems outside its own sandbox.</p>
+        <p>An agent becomes golemic when it can carry human intention across a boundary: when it can speak to people, move value, bind or approve action, enter private systems, summon human attention, alter deployed systems, publish to the world, delete shared records, route production traffic or work, or escalate authority.</p>
+        <p>The Covenant is triggered by delegated consequence, not by verbs alone. A sandboxed draft, scratch-file deletion, local queue route, or simulated deploy may remain below the line. The same act becomes golemic when it can change the state, rights, money, attention, access, obligations, or safety of people or systems outside the sandbox.</p>
         <p>The question is not whether the clay is alive. The question is whether a human will is still walking around inside it after the human has stopped paying attention.</p>
       </section>
 

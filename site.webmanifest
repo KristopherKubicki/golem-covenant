@@ -1,0 +1,23 @@
+{
+  "name": "The Golem Covenant",
+  "short_name": "golem.md",
+  "description": "A made thing must be stoppable. A protocol for keeping bots from becoming your unbounded will.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f8fa",
+  "theme_color": "#8f1f3d",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

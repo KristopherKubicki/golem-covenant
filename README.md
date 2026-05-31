@@ -6,6 +6,8 @@ Status: v0.1, seeking review.
 
 This is not a halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compliance certification. It is a technical and moral vocabulary for people building agentic systems.
 
+The goal is practical: keep bots from becoming operationally you. A bot can carry your voice, money, access, urgency, and judgment after your attention has left. The Golem Covenant helps teams decide whether an agent can affect people or systems outside its sandbox, declare the powers it has been given, deny undeclared powers by default, validate a manifest, and test return-to-dust before real authority is enabled.
+
 ## Discuss and contribute
 
 - Questions, proposals, and review threads: https://github.com/KristopherKubicki/golem-covenant/discussions
@@ -64,7 +66,11 @@ See `docs/github-pages.md` for DNS and Pages setup.
 
 ## Premise
 
-AI agents make human will detachable, scalable, persistent, and partially autonomous. A tool becomes golemic when it is given hands: the ability to speak, spend, sign, access, summon, deploy, publish, delete, route, or escalate.
+AI agents make human will detachable, scalable, persistent, and partially autonomous. The threshold is delegated consequence: whether a tool can affect people or systems outside its own sandbox.
+
+A tool becomes golemic when it can carry human intention across a boundary: speak to people, move value, bind or approve action, enter private systems, summon human attention, alter deployed systems, publish to the world, delete shared records, route production traffic or work, or escalate authority.
+
+The covenant is triggered by delegated consequence, not by verbs alone. Sandboxed drafts, scratch-file deletes, local queue routes, and simulated deploys can remain below the line; they become golemic when they can change the state, rights, money, attention, access, obligations, or safety of people or systems outside the sandbox.
 
 The central question is not whether the clay is alive. The central question is whether a human will is still walking around inside it after the human has stopped paying attention.
 
@@ -125,6 +131,8 @@ Some agent ecosystems use `SOUL.md` as an identity or continuity file for agent 
 ## Abrahamic lenses
 
 This framework starts from Jewish golem, Shabbat, Babel, and Bezalel language, then invites Christian and Islamic perspectives without flattening them into a false consensus.
+
+The religious discourse is not decorative. It is where humans have long argued about image, delegated power, command, rest, accountability, limits, and return.
 
 Jewish lenses include golem, Shabbat, pikuach nefesh, Babel, Bezalel, bal tashchit, and b'tzelem Elohim.
 

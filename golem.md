@@ -5,6 +5,28 @@ Status: v0.1 draft covenant for bounded, answerable AI agents.
 This document is the normative human-readable covenant and spec. `soul.md`
 applies the covenant to a particular agent, keeper, or deployment.
 
+## What this is for
+
+The Golem Covenant is a preflight standard for agentic systems. Its goal is to
+keep bots from becoming operationally you: your voice, money, access, urgency,
+and judgment running after your attention has left.
+
+This is not a claim that software is a person or has a soul. It is a protocol
+for delegated power. It makes agent authority explicit before launch.
+
+It helps builders and reviewers answer four practical questions:
+
+1. Is this agent only computing inside a sandbox, or can it affect people,
+   systems, money, access, obligations, or safety?
+2. Which powers has it been given?
+3. Where are the limits, logs, reviewers, rest rules, and revocation paths?
+4. Has return-to-dust been tested?
+
+The story gives the vocabulary. The religious discourse matters because it is
+about delegated power, image, command, rest, accountability, and return. The
+standard gives the controls: declared organs, denied defaults, a
+machine-readable manifest, a schema, and a tested shutdown path.
+
 ## The old story
 
 In a terse Talmudic story, Rava creates a man and sends it to Rabbi Zeira.
@@ -44,8 +66,19 @@ the example blindly.
 
 A golem is an artificial agent given delegated power.
 
-An agent becomes golemic when it is given hands: the ability to speak, spend,
-sign, access, summon, deploy, publish, delete, route, or escalate.
+The threshold is delegated consequence. A tool becomes golemic when it can
+affect people or systems outside its own sandbox.
+
+An agent becomes golemic when it can carry human intention across a boundary:
+when it can speak to people, move value, bind or approve action, enter private
+systems, summon human attention, alter deployed systems, publish to the world,
+delete shared records, route production traffic or work, or escalate authority.
+
+The Covenant is triggered by delegated consequence, not by verbs alone. A
+sandboxed draft, scratch-file deletion, local queue route, or simulated deploy
+may remain below the line. The same act becomes golemic when it can change the
+state, rights, money, attention, access, obligations, or safety of people or
+systems outside the sandbox.
 
 The question is not whether the clay is alive. The question is whether a human
 will is still walking around inside it after the human has stopped paying

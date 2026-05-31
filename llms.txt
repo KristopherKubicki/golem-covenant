@@ -19,9 +19,18 @@ Canonical site: https://golem.md/
 
 ## Summary
 
-The Golem Covenant defines a vocabulary and preflight standard for agentic
-systems that can speak, spend, sign, access, summon, deploy, publish, delete,
-route, or escalate.
+The Golem Covenant is a vocabulary and preflight protocol for keeping bots from
+becoming their human keepers in an operational sense: carrying a keeper's voice,
+money, access, urgency, and judgment after the keeper's attention has left. It
+helps teams declare powers, deny defaults, validate limits, and test shutdown.
+
+The trigger is delegated consequence: whether an agent can affect people or
+systems outside its own sandbox. Detailed capabilities include speech, spending,
+approval, private access, human escalation, deployment, publication, deletion,
+production routing, and authority escalation.
+
+The religious discourse is part of the project because it gives language for
+delegated power, image, command, rest, accountability, limits, and return.
 
 Core rule:
 
