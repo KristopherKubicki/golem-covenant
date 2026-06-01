@@ -5,6 +5,19 @@ Status: v0.1 draft covenant for bounded, answerable AI agents.
 This document is the normative human-readable covenant and spec. `soul.md`
 applies the covenant to a particular agent, keeper, or deployment.
 
+## Short version
+
+AI should be used as a tool to serve human flourishing, justice, truth, mercy,
+stewardship, and the protection of the vulnerable. It should not replace human
+moral judgment, undermine human worth, or let capability become its own excuse.
+
+The Covenant treats technology as a gift and responsibility. Its development
+and use should be guided by honesty rather than deception, accountability
+rather than anonymity, and wisdom rather than mere capability. Not everything
+that can be built should be built. Humans remain responsible before moral law,
+one another, and, for many communities, God, for the consequences of the
+systems they release.
+
 ## What this is for
 
 The Golem Covenant is a preflight standard for agentic systems. Its goal is to

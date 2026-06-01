@@ -8,6 +8,12 @@ This is not a halakhic ruling, Catholic doctrine, fatwa, legal opinion, or compl
 
 The goal is practical: keep bots from becoming operationally you. A bot can carry your voice, money, access, urgency, and judgment after your attention has left. The Golem Covenant helps teams decide whether an agent can affect people or systems outside its sandbox, declare the powers it has been given, deny undeclared powers by default, validate a manifest, and test return-to-dust before real authority is enabled.
 
+## Short version
+
+AI should be used as a tool to serve human flourishing, justice, truth, mercy, stewardship, and the protection of the vulnerable. It should not replace human moral judgment, undermine human worth, or let capability become its own excuse.
+
+The Covenant treats technology as a gift and responsibility. Its development and use should be guided by honesty rather than deception, accountability rather than anonymity, and wisdom rather than mere capability. Not everything that can be built should be built. Humans remain responsible before moral law, one another, and, for many communities, God, for the consequences of the systems they release.
+
 ## Discuss and contribute
 
 - Questions, proposals, and review threads: https://github.com/KristopherKubicki/golem-covenant/discussions

@@ -1,7 +1,7 @@
 {
   "name": "The Golem Covenant",
   "short_name": "golem.md",
-  "description": "A made thing must be stoppable. A protocol for keeping bots from becoming your unbounded will.",
+  "description": "A made thing must be stoppable. A protocol for AI that serves human flourishing without replacing human moral judgment.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

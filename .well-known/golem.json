@@ -4,6 +4,7 @@
   "canonical": "https://golem.md/",
   "repository": "https://github.com/KristopherKubicki/golem-covenant",
   "summary": "A made thing must be stoppable. A draft protocol for keeping bots from becoming your unbounded will.",
+  "moral_posture": "AI should serve human flourishing, justice, truth, mercy, stewardship, and the protection of the vulnerable without replacing human moral judgment or undermining human worth.",
   "icons": {
     "svg": "https://golem.md/favicon.svg",
     "apple_touch": "https://golem.md/apple-touch-icon.png",

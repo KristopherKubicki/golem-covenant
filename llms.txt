@@ -27,6 +27,10 @@ becoming their human keepers in an operational sense: carrying a keeper's voice,
 money, access, urgency, and judgment after the keeper's attention has left. It
 helps teams declare powers, deny defaults, validate limits, and test shutdown.
 
+Its moral posture is that AI should serve human flourishing, justice, truth,
+mercy, stewardship, and the protection of the vulnerable, without replacing
+human moral judgment or undermining human worth.
+
 The trigger is delegated consequence: whether an agent can affect people or
 systems outside its own sandbox. Detailed capabilities include speech, spending,
 approval, private access, human escalation, deployment, publication, deletion,

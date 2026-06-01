@@ -18,6 +18,13 @@ agents. It separates covenantal language from runtime validation:
 - `for-labs.html` gives AI labs and agent-framework maintainers a review memo.
 - `ai-access.html` declares crawler, AI retrieval, and model-training access.
 
+The moral posture is that AI should be used as a tool to serve human
+flourishing, justice, truth, mercy, stewardship, and the protection of the
+vulnerable. It should not replace human moral judgment, undermine human worth,
+or let capability become its own excuse. Technology is treated as a gift and
+responsibility: honesty over deception, accountability over anonymity, and
+wisdom over mere capability.
+
 ## Core Rule
 
 No golem without a soul.
